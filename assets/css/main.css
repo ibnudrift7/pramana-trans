@@ -2017,6 +2017,9 @@ section,
   background-size: cover;
   min-height: 50vh;
 }
+.hero_mobil_detail.p_blog{
+  background: url("../img/bg-blog.jpg") top left;
+}
 .descs-hero{
   max-width: 50%;
 }

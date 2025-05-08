@@ -303,4 +303,185 @@
         transform: scale(1.1);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     }
+
+    .hero-section.pg_tour {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 150px 0;
+        position: relative;
+    }
+
+    .destination-card {
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .destination-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .destination-card img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: white;
+    }
+
+    .card-overlay h5 {
+        margin-bottom: 5px;
+        font-weight: 700;
+    }
+
+    .price-tag {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .feature-section {
+        background-color: var(--light-color);
+    }
+
+    .feature-card {
+        text-align: center;
+        padding: 30px 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        height: 100%;
+        transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+    }
+
+    .service-card {
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        height: 200px;
+    }
+
+    .service-card img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .service-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .rental-card {
+        background-color: #b35900;
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s;
+    }
+
+    .rental-card:hover {
+        background-color: #994d00;
+        transform: translateY(-5px);
+    }
+
+    .rental-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .testimonial-card:before {
+        content: '\201C';
+        font-size: 60px;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        color: rgba(255, 136, 0, 0.1);
+    }
+
+    .testimonial-rating {
+        color: #FFD700;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-user {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        object-fit: cover;
+    }
+
+    .partner-logo {
+        height: 50px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: all 0.3s;
+    }
+
+    .partner-logo:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .orange-section {
+        background-color: var(--primary-color);
+        color: white;
+    }
 </style>
