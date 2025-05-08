@@ -207,7 +207,7 @@ h6 {
 }
 
 .header .topbar .social-links a {
-  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
+  color: #fff;
   line-height: 0;
   transition: 0.3s;
   margin-left: 20px;
@@ -578,6 +578,20 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: #f8c300;
+}
+.footer-about a span{
+  color: #f8c300;
+}
+.footer{
+  color: #fff;
+}
+.footer .footer-links ul a,
+.footer .footer-contact p{
+  color: #fff !important;
+}
+.footer p{
+  color: #fff !important;
 }
 
 .footer .footer-links {
@@ -824,7 +838,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -882,7 +896,7 @@ section,
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/hero-bg.jpg") top left;
+  background: url("../img/slide-1.jpg") top left;
   background-size: cover;
 }
 
@@ -1986,9 +2000,12 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+.bg-client-trusted{
+  background-color:#727272;
+}
+.text-muted{
+  color: #fff !important;
+}
+.text-yellow{
+  color: #f8c200 !important;
 }

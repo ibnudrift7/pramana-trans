@@ -1,5 +1,4 @@
 <header id="header" class="header sticky-top">
-
     <div class="topbar d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
@@ -19,18 +18,17 @@
     <div class="branding d-flex align-items-cente">
 
         <div class="container position-relative d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <!-- <img src="assets/img/logo.png" alt=""> -->
+            <a href="index.php" class="logo d-flex align-items-center">
+                <img src="assets/img/logo-hd.png" alt="">
                 <h1 class="sitename">Pramana Trans</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#services">Sewa Mobil</a></li>
-                    <li><a href="#portfolio">Paket Tour</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#team">Blog</a></li>
+                    <li><a href="index.php" class="active">Home</a></li>
+                    <li><a href="sewa-mobil.php">Sewa Mobil</a></li>
+                    <li><a href="tour.php">Paket Tour</a></li>
+                    <li><a href="blog.php">Blog</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

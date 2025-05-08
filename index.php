@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -38,16 +38,11 @@
 
     <!-- About Section -->
     <section id="about" class="about section silver-background3">
-      <!-- Section Title -->
-      <div class="container section-title text-dark" data-aos="fade-up">
-        <h2 class="text-dark">Tentang Kami Pramana Trans</h2>
-        <p><span class="text-dark">Selamat Datang</span> <span class="description-title text-dark">di Pramana Trans</span></p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
+      <div class="container py-3">
+        <div class="py-2"></div>
         <div class="row gy-3 text-dark">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img/about.jpg" alt="" class="img-fluid">
+            <img src="assets/img/banner-1.jpg" alt="" class="img-fluid">
           </div>
 
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -60,34 +55,37 @@
               <p>
                 Perjalanan nyaman dimulai dari transportasi yang tepat. Pramana Trans Jogja berkomitmen memberikan:
               </p>
-              <ul>
-                <li>
-                  <i class="bi bi-diagram-3"></i>
-                  <div>
-                    <h4>Armada Bersih & Nyaman</h4>
-                    <p>Armada kami selalu dalam kondisi prima, bersih, dan nyaman untuk memastikan perjalanan Anda menyenangkan.</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="bi bi-fullscreen-exit"></i>
-                  <div>
-                    <h4>Harga transparan dan terjangkau, tanpa biaya tersembunyi</h4>
-                    <p>Kami memberikan harga yang jujur dan transparan, tanpa biaya tambahan yang tidak terduga, sehingga Anda dapat merencanakan perjalanan dengan tenang.</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="bi bi-fullscreen-exit"></i>
-                  <div>
-                    <h4>Paket wisata Jogja custom sesuai keinginan Anda</h4>
-                    <p>Kami menyediakan berbagai pilihan paket wisata yang dapat disesuaikan dengan kebutuhan dan preferensi Anda, mulai dari wisata budaya, alam, hingga kuliner.</p>
-                  </div>
-                </li>
-              </ul>
             </div>
-
           </div>
         </div>
-
+        <div class="py-3"></div>
+        <div class="row">
+          <div class="col-md-12 about-content default-content-black text-dark ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <ul class="list-unstyled d-flex flex-row align-items-end">
+              <li>
+                <i class="bi bi-diagram-3"></i>
+                <div>
+                  <h4>Armada Bersih & Nyaman</h4>
+                  <p>Armada kami selalu dalam kondisi prima, bersih, dan nyaman untuk memastikan perjalanan Anda menyenangkan.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-fullscreen-exit"></i>
+                <div>
+                  <h4>Harga transparan dan terjangkau, tanpa biaya tersembunyi</h4>
+                  <p>Kami memberikan harga yang jujur dan transparan, tanpa biaya tambahan yang tidak terduga, sehingga Anda dapat merencanakan perjalanan dengan tenang.</p>
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-fullscreen-exit"></i>
+                <div>
+                  <h4>Paket wisata Jogja custom sesuai keinginan Anda</h4>
+                  <p>Kami menyediakan berbagai pilihan paket wisata yang dapat disesuaikan dengan kebutuhan dan preferensi Anda, mulai dari wisata budaya, alam, hingga kuliner.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
     </section><!-- /About Section -->
@@ -113,9 +111,9 @@
     ]
     ?>
     <section id="featured-services" class="featured-services section py-5">
-      <div class="container py-4">
-        <div class="text-center block_titles mb-5">
-          <h3>Sewa Mobil</h3>
+      <div class="container py-5">
+        <div class="text-center block_titles mb-5" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="section-title">Sewa Mobil</h2>
         </div>
 
         <div class="row gy-4">
@@ -158,9 +156,9 @@
     ]
     ?>
     <section id="featured-services" class="featured-services section py-5 silver-background2">
-      <div class="container py-3">
+      <div class="container py-5">
         <div class="text-center block_titles mb-5">
-          <h3>Paket Tour</h3>
+          <h2 class="section-title text-dark" data-aos="fade-up" data-aos-delay="200">Paket Tour</h2>
         </div>
         <div class="row gy-4">
           <?php foreach ($feat_sewa2 as $sewa2) : ?>
@@ -184,200 +182,9 @@
 
     </section><!-- /Featured Services Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section light-background">
-      <div class="container py-4">
-        <div class="section-title text-center" data-aos="fade-up">
-          <h2 class="text-dark">Pelanggan Pramana Trans</h2>
-          <div class="py-2"></div>
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "320": {
-                    "slidesPerView": 2,
-                    "spaceBetween": 40
-                  },
-                  "480": {
-                    "slidesPerView": 3,
-                    "spaceBetween": 60
-                  },
-                  "640": {
-                    "slidesPerView": 4,
-                    "spaceBetween": 80
-                  },
-                  "992": {
-                    "slidesPerView": 6,
-                    "spaceBetween": 120
-                  }
-                }
-              }
-            </script>
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-              <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-            </div>
-          </div>
+    <?php include './parts/_part_whyus.php' ?>
 
-        </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="text-white">Mengapa Memilih Kami?</h2>
-        <!-- <p><span>Check Our</span> <span class="description-title">Services</span></p> -->
-      </div><!-- End Section Title -->
-
-      <?php
-      $list_whys = [
-        [
-          'icons' => 'bi-activity',
-          'title' => 'Crew Berpengalaman',
-        ],
-        [
-          'icons' => 'bi-broadcast',
-          'title' => 'Armada Terawat dan Service Rutin',
-        ],
-        [
-          'icons' => 'bi-easel',
-          'title' => 'Harga Kompetitif',
-        ],
-        [
-          'icons' => 'bi-bounding-box-circles',
-          'title' => 'Layanan 24 Jam untuk Pelanggan',
-        ],
-      ];
-      ?>
-
-
-      <div class="container">
-
-        <div class="row gy-4 justify-content-center">
-
-          <?php foreach ($list_whys as $why) : ?>
-            <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item position-relative p-5">
-                <div class="icon">
-                  <i class="bi <?= htmlspecialchars($why['icons']) ?>"></i>
-                </div>
-                <a href="#" class="stretched-link text-dark">
-                  <h5 class="text-dark"><?= htmlspecialchars($why['title']) ?></h5>
-                </a>
-              </div>
-            </div><!-- End Service Item -->
-          <?php endforeach; ?>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Contact Section -->
-    <!-- <section id="contact" class="contact section">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Contact</h2>
-      <p><span>Need Help?</span> <span class="description-title">Contact Us</span></p>
-    </div
-
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-5">
-
-          <div class="info-wrap">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-            </div>
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
-              </div>
-            </div>
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>info@example.com</p>
-              </div>
-            </div>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-
-              <div class="col-md-6">
-                <label for="name-field" class="pb-2">Your Name</label>
-                <input type="text" name="name" id="name-field" class="form-control" required="">
-              </div>
-
-              <div class="col-md-6">
-                <label for="email-field" class="pb-2">Your Email</label>
-                <input type="email" class="form-control" name="email" id="email-field" required="">
-              </div>
-
-              <div class="col-md-12">
-                <label for="subject-field" class="pb-2">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject-field" required="">
-              </div>
-
-              <div class="col-md-12">
-                <label for="message-field" class="pb-2">Message</label>
-                <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-              </div>
-
-              <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                <button type="submit">Send Message</button>
-              </div>
-
-            </div>
-          </form>
-        </div>
-
-      </div>
-
-    </div>
-
-    </section> -->
-    <!-- /Contact Section -->
+    <?php include './parts/_part_client.php' ?>
 
   </main>
 
@@ -407,7 +214,6 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
