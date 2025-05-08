@@ -2009,3 +2009,98 @@ section,
 .text-yellow{
   color: #f8c200 !important;
 }
+
+.hero_mobil_detail{
+  background: url("../img/back-cars.jpg") top left;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+}
+.descs-hero{
+  max-width: 50%;
+}
+
+/* Elegant dark theme for .card.card-list-car */
+.card.card-list-car {
+    background-color: #2c2c2c; /* Dark background */
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 12px; /* Smooth rounded corners */
+    overflow: hidden; /* Ensure content stays within the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Elegant shadow for depth */
+    color: #fff; /* White text for contrast */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.card.card-list-car:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+}
+
+.card.card-list-car .car-card-header {
+    background-color: #444; /* Slightly lighter dark background */
+    padding: 15px; /* Padding inside the header */
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align text */
+    color: #f0ad4e; /* Highlighted text color */
+}
+
+.card.card-list-car .car-img-container {
+    padding: 15px; /* Padding around the image */
+    text-align: center; /* Center the image */
+    background-color: #333; /* Darker background for the image section */
+}
+
+.card.card-list-car .car-img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Slightly rounded corners for the image */
+    border: 2px solid #555; /* Subtle border around the image */
+}
+
+.card.card-list-car .card-body {
+    padding: 20px; /* Padding inside the card body */
+}
+
+.card.card-list-car .price-table {
+    width: 100%; /* Full width table */
+    margin-bottom: 15px; /* Space below the table */
+    font-size: 1rem; /* Standard font size */
+    color: #ddd; /* Light gray text */
+}
+
+.card.card-list-car .price-table td {
+    padding: 8px; /* Padding inside table cells */
+}
+
+.card.card-list-car .price-highlight {
+    color: #f0ad4e; /* Highlight color for price */
+    font-weight: bold; /* Bold text */
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+.card.card-list-car .btn {
+    border-radius: 6px; /* Rounded buttons */
+    font-size: 1rem; /* Standard font size */
+    padding: 10px 15px; /* Padding inside buttons */
+    color: #fff; /* White text */
+    background-color: #f0ad4e; /* Highlight button color */
+    border: none; /* Remove border */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.card.card-list-car .btn:hover {
+    background-color: #d98c2b; /* Darker highlight on hover */
+}
+
+.card.card-list-car .btn-outline-primary {
+    color: #f0ad4e; /* Highlight text color */
+    border: 1px solid #f0ad4e; /* Highlight border */
+    background-color: transparent; /* Transparent background */
+}
+
+.card.card-list-car .btn-outline-primary:hover {
+    background-color: #f0ad4e; /* Highlight background on hover */
+    color: #fff; /* White text on hover */
+}
