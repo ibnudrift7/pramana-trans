@@ -1,0 +1,19 @@
+{
+    "name": "acf/trusted-partner",
+    "title": "Trusted Partner",
+    "description": "Trusted Partner block.",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "trusted-partner"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "trusted-partner.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}

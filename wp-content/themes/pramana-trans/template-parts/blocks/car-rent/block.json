@@ -1,0 +1,19 @@
+{
+    "name": "acf/car-rent",
+    "title": "Car Rent",
+    "description": "Car Rent block.",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "car-rent"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "car-rent.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}

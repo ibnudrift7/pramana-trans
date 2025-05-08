@@ -1,0 +1,19 @@
+{
+    "name": "acf/about",
+    "title": "About",
+    "description": "About block.",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "about"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "about.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}

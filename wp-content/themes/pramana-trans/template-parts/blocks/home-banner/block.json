@@ -1,0 +1,19 @@
+{
+    "name": "acf/home-banner",
+    "title": "Home Banner",
+    "description": "Home Banner block.",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "home-banner"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "home-banner.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}

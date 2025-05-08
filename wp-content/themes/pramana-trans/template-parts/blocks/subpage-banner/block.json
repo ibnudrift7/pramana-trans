@@ -1,0 +1,19 @@
+{
+    "name": "acf/subpage-banner",
+    "title": "Subpage Banner",
+    "description": "Subpage Banner block.",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "subpage-banner"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "subpage-banner.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}

@@ -1,0 +1,19 @@
+{
+    "name": "acf/why-choose-us",
+    "title": "Why Choose Us",
+    "description": "Why Choose Us block.",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "why-choose-us"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "why-choose-us.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}
