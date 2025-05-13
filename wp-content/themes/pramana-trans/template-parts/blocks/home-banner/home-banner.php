@@ -29,7 +29,8 @@
 
   $custom_bg = '';
   if (!empty($background_url)) {
-    $custom_bg = ' style="background-image: url(' . $background_url . ') top left;" ';
+    $custom_bg = ' style="background: url(' . $background_url . ') top left; 
+    background-size: cover;" ';
   }
 ?>
 

@@ -44,7 +44,7 @@
                 <div class="destination-card">
                     <img src="<?php echo $tpac_img_url; ?>" alt="<?php echo $tpac_title; ?>">
                     <div class="card-overlay">
-                        <h5>PAKET WISATA <?php echo $tpac_title; ?></h5>
+                        <h5>PAKET WISATA <?php echo strtoupper($tpac_title); ?></h5>
                         <span class="price-tag"><?php echo $tour_start_price ?></span>
                     </div>
                 </div>
