@@ -17,7 +17,7 @@
 				<a href="<?php echo $fb; ?>" class="facebook"><i class="bi bi-facebook"></i></a>
 				<a href="<?php echo $ig; ?>" class="instagram"><i class="bi bi-instagram"></i></a>
 				<div class="space px-2"></div>
-				<a href="/id/" class="language-id"><span>ID</span></a>
+				<a href="/" class="language-id"><span>ID</span></a>
 				<a href="/en/" class="language-en ms-2"><span>EN</span></a>
 			</div>
 		</div>
