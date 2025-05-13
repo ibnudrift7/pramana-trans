@@ -38,7 +38,7 @@
             $desc = get_sub_field('wcu_desc');
         ?>
             <div class="col-md-6 col-lg-3">
-              <div class="feature-card text-center">
+              <div class="feature-card bg-dark text-center">
                   <div class="feature-icon">
                       <i class="bi bi-<?php echo $icon; ?>"></i>
                   </div>

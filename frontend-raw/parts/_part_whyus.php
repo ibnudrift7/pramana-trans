@@ -5,7 +5,7 @@
         <div class="row g-4">
             <!-- Feature 1 -->
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card text-center">
+                <div class="feature-card bg-dark text-center">
                     <div class="feature-icon">
                         <i class="bi bi-cash-stack"></i>
                     </div>
@@ -16,7 +16,7 @@
 
             <!-- Feature 2 -->
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card text-center">
+                <div class="feature-card bg-dark text-center">
                     <div class="feature-icon">
                         <i class="bi bi-shield-check"></i>
                     </div>
@@ -27,7 +27,7 @@
 
             <!-- Feature 3 -->
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card text-center">
+                <div class="feature-card bg-dark text-center">
                     <div class="feature-icon">
                         <i class="bi bi-clock-history"></i>
                     </div>
@@ -38,7 +38,7 @@
 
             <!-- Feature 4 -->
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card text-center">
+                <div class="feature-card bg-dark text-center">
                     <div class="feature-icon">
                         <i class="bi bi-headset"></i>
                     </div>
