@@ -13,15 +13,16 @@
   <section class="blog-content py-5">
     <div class="container py-4">
       <div class="row">
-        <!-- Blog Posts - 3 columns per row -->
         <div class="col-lg-9">
           <div class="row">
             <?php
+              $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
               $args = array(
-                  'post_type' => 'post',
-                  'posts_per_page' => -1,
-                  'orderby' => 'date',
-                  'order' => 'DESC'
+                'post_type' => 'post',
+                'posts_per_page' => 10,
+                'paged' => $paged,
+                'orderby' => 'date',
+                'order' => 'DESC'
               );
               
               $post_query = new WP_Query( $args );
@@ -34,13 +35,15 @@
                   $date_raw = get_post_timestamp();
                   $date = date("M d, Y", $date_raw);
                   $author_id = get_post_field ('post_author', get_the_ID());
-                  $author_name = get_the_author_meta( 'display_name' , $author_id ); 
+                  $author_name = get_the_author_meta('display_name' , $author_id);
+                  $img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
+
             ?>
                   <div class="col-md-4 mb-4">
                   <div class="card blog-card text-light bg-dark mb-2">
                     <img
-                      src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                      class="card-img-top" alt="Blog Post">
+                      src="<?php echo $img_url; ?>"
+                      class="card-img-top" alt="<?php echo $title; ?>">
                     <div class="card-body">
                       <div class="blog-meta pb-2">
                         <span><i class="far fa-calendar"></i> <?php echo $date ?></span>
@@ -54,23 +57,42 @@
             <?php
                 }
               }
-              wp_reset_postdata();
             ?>
           </div>
 
           <!-- Pagination -->
           <nav aria-label="Page navigation" class="mt-4">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item active"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
+            <?php 
+              $pages = paginate_links([
+                'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+                'total'        => $post_query->max_num_pages,
+                'current'      => max( 1, get_query_var( 'paged' ) ),
+                'format'       => '?paged=%#%',
+                'show_all'     => false,
+                'type'         => 'array',
+                'prev_text'    => 'Previous',
+                'next_text'    => 'Next',
+              ]);
+
+              if(is_array($pages)) {
+                echo '<ul class="pagination justify-content-center">';
+
+                foreach ($pages as $page) {
+                  $link = preg_replace('/\bpage-numbers\b/', 'page-link', $page);;
+                  $is_active = false;
+                  
+                  if (preg_match('/class="[^"]*\bcurrent\b[^"]*"/', $link)) {
+                    $is_active = true;
+                  }
+                  
+                  echo '<li class="page-item ' . ($is_active ? 'active' : '' ) . '">' . $link . '</li>';
+                }
+
+                echo '</ul>';
+              }
+
+              wp_reset_postdata();
+            ?>
           </nav>
         </div>
 
@@ -134,7 +156,7 @@
               <div class="d-flex flex-wrap gap-2">
                 <?php
                   $tags = get_tags();
-                  // var_dump($tags);
+                  
                   if ($tags) {
                     foreach($tags as $tag) {
                       echo '<a href="' . get_tag_link($tag->term_id ) .  '" class="badge bg-light text-dark p-2">' . $tag->name . '</a>'; 
