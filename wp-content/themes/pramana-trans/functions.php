@@ -66,6 +66,7 @@ function pramana_scripts() {
 		'images-loaded-js' => '/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
 		'isotope-js' => '/assets/vendor/isotope-layout/isotope.pkgd.min.js',
 		'pramana-js' => '/assets/js/main.js',
+		'pramana-custom-js' => '/assets/js/custom.js',
 	];
 	
 	foreach ($scripts as $key => $dir) {
@@ -92,8 +93,10 @@ function register_acf_blocks() {
 		'trusted-partner',
 		'car-rent',
 		'car-rent-home',
+		'tour-packages',
+		'tour-packages-items',
+		'more-services',
 		// 'bus-rent',
-		// 'tour-package',
 		// 'tour-package-home',
 	];
 

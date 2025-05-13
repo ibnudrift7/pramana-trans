@@ -1,0 +1,19 @@
+{
+    "name": "acf/tour-packages-items",
+    "title": "Tour Packages Items",
+    "description": "Tour Packages Items",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "tour-packages-items"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "tour-packages-items.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}

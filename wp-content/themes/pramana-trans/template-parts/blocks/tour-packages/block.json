@@ -1,0 +1,19 @@
+{
+    "name": "acf/tour-packages",
+    "title": "Tour Packages",
+    "description": "Tour Packages",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "tour-packages"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "tour-packages.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}

@@ -90,6 +90,10 @@
                 <?php 
                   $categories = get_categories();
                   foreach($categories as $category) {
+                    if ($category->name == 'Tour City'){
+                      continue;
+                    }
+
                     echo '<li><a href="' . get_category_link($category->term_id) . '">' . $category->name . ' <span class="badge">' . $category->category_count . '</span></a></li>';
                   } 
                 ?>

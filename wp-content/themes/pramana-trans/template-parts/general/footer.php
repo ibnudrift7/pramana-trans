@@ -1,17 +1,11 @@
 <footer id="footer" class="footer text-light py-4">
   <div class="container footer-top">
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
-      <div class="col-lg-4 col-md-6 footer-about">
-        <a href="index.html" class="d-flex align-items-center">
-          <span class="sitename">PRAMANA TRANS</span>
-        </a>
-        <div class="footer-contact pt-3 text-dark">
-          <p>Jl. Ring Road Utara, Ngawean, Trihanggo, Kec. Gamping</p>
-          <p>, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55285</p>
-          <p class="mt-3"><strong>Phone:</strong> <span>+0818-0590-0800</span></p>
-          <p><strong>Email:</strong> <span>contact@pramanatrans.com</span></p>
-        </div>
-      </div>
+      <?php 
+        $footer_about = get_field("left_footer", 'option');
+        $footer_socials = get_field("right_footer", 'option');
+      ?>
+      <?php echo $footer_about; ?>
       <div class="col-lg-4 col-md-3 footer-links">
         <h4>Useful Links</h4>
         <?php
@@ -24,15 +18,7 @@
         );
         ?>
       </div>
-      <div class="col-lg-4 col-md-12  text-dark">
-        <h4>Follow Us</h4>
-        <p>Stay connected with us on social media for updates and offers!</p>
-        <div class="social-links d-flex">
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-tiktok"></i></a>
-        </div>
-      </div>
+      <?php echo $footer_socials; ?>
     </div>
   </div>
 
@@ -43,7 +29,7 @@
 </footer>
 
 <!-- WhatsApp Float Button -->
-<a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/<?php echo get_field("pramana_telephone", 'option'); ?>" data-wa="<?php echo get_field("pramana_telephone", 'option'); ?>" id="whatsapp-number" class="whatsapp-float" target="_blank">
   <i class="bi bi-whatsapp"></i>
 </a>
 

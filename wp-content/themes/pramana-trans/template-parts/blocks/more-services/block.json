@@ -1,0 +1,19 @@
+{
+    "name": "acf/more-services",
+    "title": "More Services",
+    "description": "More Services block.",
+    "category": "formatting",
+    "icon": "admin-generic",
+    "keywords": [
+        "more-services"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "more-services.php"
+    },
+    "supports": {
+        "align": true,
+        "anchor": true
+    },
+    "align": "full"
+}
