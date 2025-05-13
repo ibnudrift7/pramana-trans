@@ -18,6 +18,7 @@ function pramana_supports() {
 	add_theme_support( 'wp-block-styles' );
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'menus' );
+	add_theme_support( 'post-thumbnails' );
 
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );

@@ -51,14 +51,106 @@
             </div>
         </div>
 
-        <section class="py-5">
-            <!-- Car Listings -->
-            <div class="container py-5">
-                <!-- Start content -->
-                <!-- End content -->
+        <!-- Blog Content -->
+        <section class="blog-content py-5">
+            <div class="container py-4">
+                <div class="row">
+                    <!-- Blog Posts - 3 columns per row -->
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <?php for ($i = 0; $i < 5; $i++): ?>
+                                <!-- Blog Post 1 -->
+                                <div class="col-md-4 mb-4">
+                                    <div class="card blog-card text-light bg-dark mb-2">
+                                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="Blog Post">
+                                        <div class="card-body">
+                                            <div class="blog-meta pb-2">
+                                                <span><i class="far fa-calendar"></i> May 12, 2025</span>
+                                                <span><i class="far fa-user"></i> Admin</span>
+                                            </div>
+                                            <h5 class="card-title pb-2">10 Tips for Safe Driving on Long Trips</h5>
+                                            <a href="#" class="btn btn-read-more btn-light">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Blog Post 2 -->
+                            <?php endfor; ?>
 
+                        </div>
+
+                        <!-- Pagination -->
+                        <nav aria-label="Page navigation" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-lg-3">
+                        <div class="sidebar">
+                            <!-- Search Form -->
+                            <div class="search-form mb-4">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+
+                            <!-- Categories -->
+                            <div class="categories mb-5">
+                                <h4>Categories</h4>
+                                <ul class="pl-0 ml-0">
+                                    <li><a href="#">Travel Tips <span class="badge">14</span></a></li>
+                                    <li><a href="#">Car Rental <span class="badge">23</span></a></li>
+                                    <li><a href="#">Road Trips <span class="badge">9</span></a></li>
+                                    <li><a href="#">Family Vacations <span class="badge">18</span></a></li>
+                                    <li><a href="#">Car Maintenance <span class="badge">7</span></a></li>
+                                    <li><a href="#">Travel Destinations <span class="badge">12</span></a></li>
+                                    <li><a href="#">Budget Travel <span class="badge">5</span></a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Recent Posts -->
+                            <div class="recent-posts mb-4">
+                                <h4>Recent Posts</h4>
+                                <ul>
+                                    <li><a href="#">10 Tips for Safe Driving on Long Trips</a></li>
+                                    <li><a href="#">Best Family Vacation Destinations for 2025</a></li>
+                                    <li><a href="#">How to Choose the Right Car for Your Needs</a></li>
+                                    <li><a href="#">5 Hidden Gems for Your Next Road Trip</a></li>
+                                    <li><a href="#">The Ultimate Guide to Car Maintenance</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="tags">
+                                <h4>Tags</h4>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="#" class="badge bg-light text-dark p-2">Travel</a>
+                                    <a href="#" class="badge bg-light text-dark p-2">Car Rental</a>
+                                    <a href="#" class="badge bg-light text-dark p-2">Road Trip</a>
+                                    <a href="#" class="badge bg-light text-dark p-2">Family</a>
+                                    <a href="#" class="badge bg-light text-dark p-2">Vacation</a>
+                                    <a href="#" class="badge bg-light text-dark p-2">Budget</a>
+                                    <a href="#" class="badge bg-light text-dark p-2">Tips</a>
+                                    <a href="#" class="badge bg-light text-dark p-2">Maintenance</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end Sidebar -->
+
+                </div>
             </div>
         </section>
+        <!-- end Blog -->
 
     </main>
     <!-- end content -->
