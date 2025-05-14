@@ -13,8 +13,8 @@
           while (have_rows('car_items')): the_row();
 						$car_name = get_sub_field('car_name');
 						$car_specs = get_sub_field('car_specs');
-						$whatsapp = get_sub_field('car_wa');
-						$tel = get_sub_field('car_tel');
+						$wa = get_field("pramana_whatsapp", 'option');
+						$phone = get_field("pramana_telephone", 'option');
 						$car_image = get_sub_field('car_image') ?? [];
   					$car_image_url = $car_image['url'];
 						$start_price = get_sub_field( 'car_rent_type')[0]['car_rent_price'] ?? '';  
@@ -51,18 +51,15 @@
 															endwhile; 
 														?>
 													</table>
-													<button class="btn btn-primary mt-3 w-100">PESAN</button>
-
 												<?php endif; ?>
 											</div>
 											<div class="col-md-6">
 												<div class="py-4"></div>
 												<h5 class="fw-bold mb-3">Harga Mulai <span class="price-highlight"><?php  echo $start_price; ?></span></h5>
 												<div class="d-flex justify-content-between mt-3 btn-group-sm">
-													<button href="<?php echo $whatsapp; ?>" class="btn btn-outline-primary"><i class="fab fa-whatsapp me-1"></i> WHATSAPP</button>
-													<button href="<?php echo $tel; ?>" class="btn btn-outline-primary"><i class="fas fa-phone me-1"></i> TELEPON</button>
+													<button class="btn btn-outline-primary book_car_btn"><i class="fab fa-whatsapp me-1"></i> WHATSAPP</button>
+													<a href="tel:<?php echo $phone; ?>" class="btn btn-outline-primary"><i class="fas fa-phone me-1"></i> TELEPON</a>
 												</div>
-												<button class="btn btn-primary w-100 mt-3"><i class="fas fa-calendar-check me-1"></i> BOOKING</button>
 											</div>
 										</div>
 									</div>

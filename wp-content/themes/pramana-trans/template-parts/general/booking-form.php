@@ -22,7 +22,7 @@
             <option>Fullday</option>
           </select>
         </div>
-        <button id="book_car_btn" class="btn btn-warning text-white">BOOKING SEKARANG</button>
+        <button id="book_car_form_btn" class="btn btn-warning text-white">BOOKING SEKARANG</button>
       </div>
     </div>
     <div class="col-lg-7">
