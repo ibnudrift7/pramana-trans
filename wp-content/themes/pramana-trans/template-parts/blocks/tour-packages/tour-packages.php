@@ -87,15 +87,21 @@
               $tpac_link = get_permalink($post_id);
           ?>
               <div class="col-md-4 col-sm-6">
-                <a href="<?php echo $tpac_link ?>">
-                  <div class="destination-card">
-                      <img src="<?php echo $tpac_img_url; ?>" alt="<?php echo $tpac_title; ?>">
-                      <div class="card-overlay">
-                          <h5>PAKET WISATA <?php echo $tpac_title; ?></h5>
+                <div class="destination-card">
+                    <img src="<?php echo $tpac_img_url; ?>" alt="<?php echo $tpac_title; ?>">
+                    <div class="card-overlay">
+                      <h5>Paket Wisata <?php echo $tpac_title; ?></h5>
+                      <div class="d-flex justify-content-between align-items-end">
+                        <div class="cont">
+                          <span class="start">Start from:</span> <br>
                           <span class="price-tag"><?php echo $tour_start_price ?></span>
+                        </div>
+                        <div class="btn-group">
+                          <a href="<?php echo $tpac_link ?>" class="btn-group btn-group-sm btn btn-warning"><small>Lihat</small></a>
+                        </div>
                       </div>
-                  </div>
-                </a>
+                    </div>
+                </div>
               </div>
           <?php 
             endwhile; 

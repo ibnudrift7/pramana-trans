@@ -94,7 +94,6 @@ function register_acf_blocks() {
 		'car-rent',
 		'car-rent-home',
 		'tour-packages',
-		'tour-packages-items',
 		'more-services',
 		// 'bus-rent',
 		// 'tour-package-home',

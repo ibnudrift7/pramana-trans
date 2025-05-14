@@ -26,6 +26,7 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/additional.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -59,31 +60,33 @@
           </div>
         </div>
         <div class="py-3"></div>
-        <div class="row">
-          <div class="col-md-12 about-content default-content-black text-dark ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <ul class="list-unstyled d-flex flex-row align-items-end">
-              <li>
-                <i class="bi bi-diagram-3"></i>
-                <div>
-                  <h4>Armada Bersih & Nyaman</h4>
-                  <p>Armada kami selalu dalam kondisi prima, bersih, dan nyaman untuk memastikan perjalanan Anda menyenangkan.</p>
-                </div>
-              </li>
-              <li>
-                <i class="bi bi-fullscreen-exit"></i>
-                <div>
-                  <h4>Harga transparan dan terjangkau, tanpa biaya tersembunyi</h4>
-                  <p>Kami memberikan harga yang jujur dan transparan, tanpa biaya tambahan yang tidak terduga, sehingga Anda dapat merencanakan perjalanan dengan tenang.</p>
-                </div>
-              </li>
-              <li>
-                <i class="bi bi-fullscreen-exit"></i>
-                <div>
-                  <h4>Paket wisata Jogja custom sesuai keinginan Anda</h4>
-                  <p>Kami menyediakan berbagai pilihan paket wisata yang dapat disesuaikan dengan kebutuhan dan preferensi Anda, mulai dari wisata budaya, alam, hingga kuliner.</p>
-                </div>
-              </li>
-            </ul>
+        <div class="container mx-auto">
+          <div class="row">
+            <div class="col-md-12 about-content default-content-black text-dark ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="200">
+              <ul class="list-unstyled d-flex flex-row align-items-end mobile_list">
+                <li>
+                  <i class="bi bi-diagram-3"></i>
+                  <div>
+                    <h4>Armada Bersih & Nyaman</h4>
+                    <p>Armada kami selalu dalam kondisi prima, bersih, dan nyaman untuk memastikan perjalanan Anda menyenangkan.</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-fullscreen-exit"></i>
+                  <div>
+                    <h4>Harga transparan dan terjangkau, tanpa biaya tersembunyi</h4>
+                    <p>Kami memberikan harga yang jujur dan transparan, tanpa biaya tambahan yang tidak terduga, sehingga Anda dapat merencanakan perjalanan dengan tenang.</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="bi bi-fullscreen-exit"></i>
+                  <div>
+                    <h4>Paket wisata Jogja custom sesuai keinginan Anda</h4>
+                    <p>Kami menyediakan berbagai pilihan paket wisata yang dapat disesuaikan dengan kebutuhan dan preferensi Anda, mulai dari wisata budaya, alam, hingga kuliner.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@
 				<h2 class="section-title">PAKET WISATA <?php echo strtoupper(get_the_title()); ?></h2>
 				<div class="row g-4">
 					<?php
-						// $tour_city_cat_id = get_term_by('slug', 'tour-city', 'category')->term_id;
+						$tour_city_id = get_the_ID();
 						$args = array(
 							'post_type' => 'tour-package',
 							'post_parent' => get_the_ID(),
@@ -25,22 +25,27 @@
 								$tour_query->the_post(); 
 
 								$tour_title = get_the_title();
-								$tour_excerpt = get_the_excerpt();
+              	$tour_start_price = get_field('tpi_start_price', get_the_ID());
 								$tour_link = get_permalink();
 								$tour_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 					?>
-								<div class="col-md-6 col-lg-3">
-									<div class="card">
-										<div class="card-img-container">
+								<div class="col-md-4 col-sm-6">
+									<div class="destination-card">
 											<img src="<?php echo $tour_img_url; ?>" alt="<?php echo $tour_title; ?>">
-										</div>
-										<div class="card-body">
-											<h5 class="card-title"><?php echo $tour_title; ?></h5>
-											<p class="card-text text-muted text-light"><?php echo $tour_excerpt; ?></p>
-											<a href="<?php echo $tour_link; ?>" class="btn btn-primary btn-sm">Pesan</a>
-										</div>
+											<div class="card-overlay">
+												<h5>Paket Wisata <?php echo $tour_title; ?></h5>
+												<div class="d-flex justify-content-between align-items-end">
+													<div class="cont">
+														<span class="start">Start from:</span> <br>
+														<span class="price-tag"><?php echo $tour_start_price ?></span>
+													</div>
+													<div class="btn-group">
+														<a href="<?php echo $tour_link ?>" class="btn-group btn-group-sm btn btn-warning"><small>Lihat</small></a>
+													</div>
+												</div>
+											</div>
 									</div>
-								</div>
+              	</div>
 					<?php
 							}
 						}
@@ -50,6 +55,10 @@
 			</div>
 		</section>
 
+		<?php get_template_part('template-parts/general/booking-form'); ?>
+		<?php get_template_part('template-parts/general/locations'); ?>
+	<?php else: ?>
+		<?php get_template_part('template-parts/components/tour-packages-items'); ?>
 		<?php get_template_part('template-parts/general/booking-form'); ?>
 		<?php get_template_part('template-parts/general/locations'); ?>
 	<?php endif; ?>

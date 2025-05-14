@@ -2001,12 +2001,15 @@ section,
 }
 
 .bg-client-trusted{
-  background-color:#727272;
+  background-color:#b9b9b9;
 }
 .text-muted{
   color: #fff !important;
 }
 .text-yellow{
+  color: #f8c200 !important;
+}
+.text-gold{
   color: #f8c200 !important;
 }
 
@@ -2106,4 +2109,21 @@ section,
 .card.card-list-car .btn-outline-primary:hover {
     background-color: #f0ad4e; /* Highlight background on hover */
     color: #fff; /* White text on hover */
+}
+
+.mobile-nav-active .navmenu>ul{
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .mobile_list{
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-title{
+    font-size: 25px !important;
+    text-align: center;
+  }
 }

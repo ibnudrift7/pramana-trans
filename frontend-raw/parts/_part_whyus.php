@@ -5,7 +5,7 @@
         <div class="row g-4">
             <!-- Feature 1 -->
             <div class="col-md-6 col-lg-3">
-                <div class="feature-card bg-dark text-center">
+                <div class="feature-card bg-dark text-center">bg-dark text-center">
                     <div class="feature-icon">
                         <i class="bi bi-cash-stack"></i>
                     </div>

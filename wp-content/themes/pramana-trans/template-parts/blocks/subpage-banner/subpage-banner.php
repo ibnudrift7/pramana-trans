@@ -29,6 +29,9 @@
     case 'car-detail':
       $class_name = 'hero_mobil_detail py-5';
       break;
+    case 'tour-detail':
+      $class_name = 'hero-section text-center py-5 pg_tour';
+      break;
     default:
       $class_name = 'hero-section';
       break;
@@ -43,6 +46,12 @@
     switch ($style) {
       case 'car-detail':
         $custom_bg = ' style="background: url(' . $background_url . ') top left; 
+          background-repeat: no-repeat; 
+          background-position: center; 
+          background-size: cover;" ';
+        break;
+      case 'tour-detail':
+        $custom_bg = ' style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' . $background_url . '); 
           background-repeat: no-repeat; 
           background-position: center; 
           background-size: cover;" ';
@@ -76,11 +85,19 @@
         </div>
     </div>
   </section>
+<?php elseif ($style == 'tour-detail') : ?>
+  <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>" <?php echo $custom_bg ?>>
+    <div class="container py-5">
+      <h1 class="display-4 fw-bold text-gold mb-4"><?php echo $header ?></h1>
+      <?php echo $desc; ?>
+      <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-gold px-4 py-2"><?php echo $link['title']; ?></a>
+    </div>
+  </section>
 <?php else: ?>
   <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>" <?php echo $custom_bg ?>>
     <div class="container">
       <div class="hero-content">
-        <h1 class="hero-title"><?php echo $header ?></h1>
+        <h1 class="display-5 fw-bold mb-4"><?php echo $header ?></h1>
         <?php echo $desc; ?>
   
         <?php if ($link) : ?>

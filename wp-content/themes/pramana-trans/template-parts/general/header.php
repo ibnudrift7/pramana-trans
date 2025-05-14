@@ -6,7 +6,7 @@
 	$email = get_field("pramana_email", 'option');
 ?>
 <header id="header" class="header sticky-top">
-	<div class="topbar d-flex align-items-center">
+	<div class="topbar d-flex align-items-center d-none">
 		<div class="container d-flex justify-content-center justify-content-md-between">
 			<div class="contact-info d-flex align-items-center">
 				<i class="bi bi-envelope d-flex align-items-center"><a
@@ -31,7 +31,7 @@
 					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 				?>
 				<img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo( 'name' ); ?>">
-				<h1 class="sitename"><?php echo get_bloginfo( 'name' ); ?></h1>
+				<h1 class="sitename text-gold"><?php echo get_bloginfo( 'name' ); ?></h1>
 			</a>
 			<nav id="navmenu" class="navmenu">
 				<?php 
