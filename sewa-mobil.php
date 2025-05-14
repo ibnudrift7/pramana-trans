@@ -53,7 +53,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1584107918348-3e42c9a6f6b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Jogja">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1584107918348-3e42c9a6f6b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Jogja">
                                 <div class="location-badge">JOGJA</div>
                             </div>
                             <div class="card-body">
@@ -68,7 +68,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1164&q=80" alt="Solo">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1596422846543-75c6fc197f11?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1164&q=80" alt="Solo">
                                 <div class="location-badge">SOLO</div>
                             </div>
                             <div class="card-body">
@@ -83,7 +83,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1596005554384-d293674c91d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1164&q=80" alt="Semarang">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1596005554384-d293674c91d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1164&q=80" alt="Semarang">
                                 <div class="location-badge">SEMARANG</div>
                             </div>
                             <div class="card-body">
@@ -98,7 +98,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1584107918348-3e42c9a6f6b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Malang">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1584107918348-3e42c9a6f6b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Malang">
                                 <div class="location-badge">MALANG</div>
                             </div>
                             <div class="card-body">
@@ -113,7 +113,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Surabaya">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Surabaya">
                                 <div class="location-badge">SURABAYA</div>
                             </div>
                             <div class="card-body">
@@ -128,7 +128,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Bali">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Bali">
                                 <div class="location-badge">BALI</div>
                             </div>
                             <div class="card-body">
@@ -143,7 +143,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Bandung">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Bandung">
                                 <div class="location-badge">BANDUNG</div>
                             </div>
                             <div class="card-body">
@@ -158,7 +158,7 @@
                     <div class="col-md-6 col-lg-3">
                         <div class="card">
                             <div class="card-img-container">
-                                <img src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Jakarta">
+                                <img class="img-fluid" src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Jakarta">
                                 <div class="location-badge">JAKARTA</div>
                             </div>
                             <div class="card-body">

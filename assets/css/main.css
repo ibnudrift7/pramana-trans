@@ -2114,3 +2114,16 @@ section,
 .mobile-nav-active .navmenu>ul{
   background: rgba(0, 0, 0, 0.7);
 }
+
+@media (max-width: 768px) {
+  .mobile_list{
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-title{
+    font-size: 25px !important;
+    text-align: center;
+  }
+}
