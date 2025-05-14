@@ -26,6 +26,7 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/additional.css" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -187,7 +188,7 @@
     <!-- Services Section -->
     <section class="py-5 orange-section">
         <div class="container py-3">
-            <h2 class="section-title text-white pb-5">More By Nagantour</h2>
+            <h2 class="section-title text-white pb-5">More By PramanaTour</h2>
             <div class="row">
                 <!-- Service 1 -->
                 <div class="col-md-6 col-lg-3 mb-4">

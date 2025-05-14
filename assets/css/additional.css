@@ -1,43 +1,14 @@
+/* --primary-color: #f8c300; */
     :root {
         --primary-color: #f8c300;
-        --secondary-color: #333;
-        --text-light: #f8f9fa;
+        --secondary-color: #ff9800;
     }
-
-    body {
-        background-color: #000;
-        color: var(--text-light);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .navbar {
-        background-color: rgba(0, 0, 0, 0.8) !important;
-        backdrop-filter: blur(10px);
-        padding: 15px 0;
-    }
-
-    .navbar-brand {
-        font-weight: 700;
-        font-size: 1.8rem;
-        color: var(--primary-color) !important;
-    }
-
-    .nav-link {
-        color: var(--text-light) !important;
-        font-weight: 500;
-        margin: 0 10px;
-        transition: all 0.3s ease;
-    }
-
-    .nav-link:hover {
-        color: var(--primary-color) !important;
-    }
-
     .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
         background-size: cover;
         background-position: center;
-        height: 66vh;
+        height: 60vh;
         display: flex;
         align-items: center;
         position: relative;
@@ -61,7 +32,7 @@
     }
 
     .btn-primary {
-        background-color: var(--primary-color);
+        background-color: gold;   
         border: none;
         color: #000;
         font-weight: 600;
@@ -121,7 +92,7 @@
         bottom: 15px;
         left: 15px;
         background-color: rgba(0, 0, 0, 0.7);
-        color: var(--text-light);
+        color: var(--primary-color);
         padding: 5px 15px;
         border-radius: 50px;
         font-weight: 600;
@@ -230,7 +201,7 @@
 
     .whatsapp-float {
         position: fixed;
-        bottom: 30px;
+        bottom: 80px;
         right: 30px;
         background-color: #25d366;
         color: white;
@@ -432,4 +403,13 @@
     .orange-section {
         background-color: var(--primary-color);
         color: white;
+    }
+
+    .btn.btn-gold{
+        background-color: var(--primary-color);
+        color: #000;
+        font-weight: 600;
+        padding: 12px 30px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
     }
