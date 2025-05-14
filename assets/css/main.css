@@ -2009,6 +2009,9 @@ section,
 .text-yellow{
   color: #f8c200 !important;
 }
+.text-gold{
+  color: #f8c200 !important;
+}
 
 .hero_mobil_detail{
   background: url("../img/back-cars.jpg") top left;
@@ -2106,4 +2109,8 @@ section,
 .card.card-list-car .btn-outline-primary:hover {
     background-color: #f0ad4e; /* Highlight background on hover */
     color: #fff; /* White text on hover */
+}
+
+.mobile-nav-active .navmenu>ul{
+  background: rgba(0, 0, 0, 0.7);
 }
