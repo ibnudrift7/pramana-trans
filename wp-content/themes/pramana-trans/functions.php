@@ -104,6 +104,28 @@ function register_acf_blocks() {
 	}
 }
 
+// Remove Admin Menu
+add_action( 'admin_menu', 'remove_admin_menu' );
+function remove_admin_menu() {
+
+	$user = wp_get_current_user();
+	if (in_array( 'editor', (array) $user->roles)) {
+		remove_menu_page( 'edit-comments.php' );
+		remove_menu_page( 'tools.php' );
+	}
+}
+
+// Remove Admin Bar Render
+add_action( 'wp_before_admin_bar_render', 'admin_bar_render' );
+function admin_bar_render() {
+	global $wp_admin_bar;
+
+	$user = wp_get_current_user();
+	if (in_array( 'editor', (array) $user->roles)) {
+		$wp_admin_bar->remove_menu('comments');
+	}
+}
+
 // add_filter( 'body_class','custom_body_classes' );
 // function custom_body_classes( $classes ) {
 // 	if ( is_front_page() ) {
