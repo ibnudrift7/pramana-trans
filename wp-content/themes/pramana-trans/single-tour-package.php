@@ -8,7 +8,7 @@
 	<?php if (has_category('tour-city')) : ?>
 		<section  class="py-5">
 			<div class="container py-5">
-				<h2 class="section-title">PAKET WISATA <?php echo strtoupper(get_the_title()); ?></h2>
+				<h2 class="section-title">Temukan Liburan - Paket Wisata <?php echo get_the_title(); ?></h2>
 				<div class="row g-4">
 					<?php
 						$tour_city_id = get_the_ID();
