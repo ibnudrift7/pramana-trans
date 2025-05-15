@@ -442,8 +442,6 @@
   background: none !important;
   padding: 0 !important;
   display: block !important;
-  height: 57vh;
-  min-height: auto;
   overflow: hidden;
 }
 
@@ -469,6 +467,6 @@
   
 @media (max-width: 992px) {
   .hero.slideHome {
-    height: auto;
+    min-height: auto;
   }
 }
