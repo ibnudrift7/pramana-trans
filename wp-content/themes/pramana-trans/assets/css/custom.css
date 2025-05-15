@@ -437,3 +437,38 @@
 .search-links a {
   color: white;
 }
+
+.hero.slideHome {
+  background: none !important;
+  padding: 0 !important;
+  display: block !important;
+  height: 57vh;
+  min-height: auto;
+  overflow: hidden;
+}
+
+.hero.slideHome .ps_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero.slideHome .ps_img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero.slideHome .carousel-item,
+#heroCarousel {
+  height: 100%;
+}
+  
+@media (max-width: 992px) {
+  .hero.slideHome {
+    height: auto;
+  }
+}

@@ -18,29 +18,50 @@
   }
 
   // Create class attribute allowing for custom "className" and "align" values.
-  $class_name = 'hero home-custom-hero section dark-background';
+  $class_name = 'hero slideHome section dark-background';
   if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
-  }
-
-  $header = get_field('hb_header');
-  $background = get_field('hb_background');
-  $background_url = $background['url'];
-
-  $custom_bg = '';
-  if (!empty($background_url)) {
-    $custom_bg = ' style="background: url(' . $background_url . ') top left; 
-    background-size: cover;" ';
   }
 ?>
 
 <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>" <?php echo $custom_bg ?>>
-  <div class="container">
-    <div class="row gy-4">
-      <div class="py-5"></div>
-      <div class="col-lg-12 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
-        <h2 class="section-title text-yellow"><?php echo $header ?></h2>
-      </div>
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <?php if (have_rows('hb_items')): ?>
+        <?php
+          while (have_rows('hb_items')): the_row();
+            $title = get_sub_field('hb_header');
+            $image = get_sub_field('hb_background');
+            $image_url = $image['url'];
+        ?>
+            <div class="carousel-item <?php echo get_row_index() == 1 ? 'active' : ''; ?>" data-bs-interval="5000">
+              <div class="ps_img">
+                <img src="<?php echo $image_url; ?>" class="img-fluid" alt="Hero Image">
+              </div>
+              <div class="container">
+                <div class="row gy-4">
+                  <div class="py-5"></div>
+                  <div class="d-none d-sm-block py-5"></div>
+                  <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="zoom-out">
+                    <h2 class="section-title text-yellow"><?php echo $title; ?></h2>
+                  </div>
+                  <div class="py-5"></div>
+                  <div class="py-2"></div>
+                </div>
+              </div>
+            </div>
+        <?php 
+          endwhile; 
+        ?>
+      <?php endif; ?>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </section>
