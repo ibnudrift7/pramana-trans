@@ -55,7 +55,7 @@
                       </div>
 
                       <div class="text-center">
-                          <button class="btn btn-gold px-4 book_tour_btn">Book Now</button>
+                          <button data-tour="<?php echo $tour_name; ?>" class="btn btn-gold px-4 book_tour_btn">Book Now</button>
                       </div>
                   </div>
               </div>

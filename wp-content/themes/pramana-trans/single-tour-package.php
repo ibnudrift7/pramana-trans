@@ -11,7 +11,6 @@
 				<h2 class="section-title">Temukan Liburan - Paket Wisata <?php echo get_the_title(); ?></h2>
 				<div class="row g-4">
 					<?php
-						$tour_city_id = get_the_ID();
 						$args = array(
 							'post_type' => 'tour-package',
 							'post_parent' => get_the_ID(),
@@ -54,13 +53,9 @@
 				</div>
 			</div>
 		</section>
-
-		<?php get_template_part('template-parts/general/booking-form'); ?>
-		<?php get_template_part('template-parts/general/locations'); ?>
 	<?php else: ?>
 		<?php get_template_part('template-parts/components/tour-packages-items'); ?>
 		<?php get_template_part('template-parts/general/booking-form'); ?>
-		<?php get_template_part('template-parts/general/locations'); ?>
 	<?php endif; ?>
 </main>
 

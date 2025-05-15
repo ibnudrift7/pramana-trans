@@ -57,7 +57,7 @@
 												<div class="py-4"></div>
 												<h5 class="fw-bold mb-3">Harga Mulai <span class="price-highlight"><?php  echo $start_price; ?></span></h5>
 												<div class="d-flex justify-content-between mt-3 btn-group-sm">
-													<button class="btn btn-outline-primary book_car_btn"><i class="fab fa-whatsapp me-1"></i> WHATSAPP</button>
+													<button data-car="<?php echo $car_name; ?>" class="btn btn-outline-primary book_car_btn"><i class="fab fa-whatsapp me-1"></i> WHATSAPP</button>
 													<a href="tel:<?php echo $phone; ?>" class="btn btn-outline-primary"><i class="fas fa-phone me-1"></i> TELEPON</a>
 												</div>
 											</div>
