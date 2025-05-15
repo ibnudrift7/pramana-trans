@@ -18,7 +18,7 @@
   }
 
   // Create class attribute allowing for custom "className" and "align" values.
-  $class_name = 'hero section dark-background';
+  $class_name = 'hero home-custom-hero section dark-background';
   if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
   }
