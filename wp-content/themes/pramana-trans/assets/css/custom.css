@@ -469,4 +469,14 @@
   .hero.slideHome {
     min-height: auto;
   }
+  .hero.slideHome:before {
+    background-color: transparent !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero.slideHome {
+    min-height: inherit !important;
+    height: auto !important;
+  }
 }
