@@ -19,8 +19,10 @@
           <div class="sidebar">
             <!-- Search Form -->
             <div class="search-form mb-4">
-              <input type="text" class="form-control" placeholder="Search...">
-              <button type="submit"><i class="fas fa-search"></i></button>
+              <form action="<?php echo site_url(); ?>">
+                <input name="s" type="text" class="form-control" placeholder="Search...">
+                <!-- <button type="submit"><i class="fas fa-search"></i></button> -->
+              </form>
             </div>
 
             <!-- Categories -->
