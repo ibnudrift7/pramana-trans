@@ -480,7 +480,17 @@
 .hero.slideHome.dark-background:before{
   background: rgba(0, 0, 0, 0.1) !important;
 }
-  
+
+.customs_ptrn.about{
+  background-image: url("/wp-content/themes/pramana-trans/assets/img/patern_left.png"), url("/wp-content/themes/pramana-trans/assets/img/patern-right.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, right top;
+  background-size: 50% auto, 50% auto;
+  /* background-attachment: fixed; */
+  background-color: #f8f8f8;
+  background-size: cover !important;
+}
+
 @media (max-width: 992px) {
   .hero.slideHome {
     min-height: auto;

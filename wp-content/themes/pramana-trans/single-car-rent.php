@@ -11,8 +11,12 @@ get_header();
 			<?php if (have_rows('car_items')): ?>
 				<?php
 				while (have_rows('car_items')): the_row();
+					// get id index.
+					$index = get_row_index();
 					$car_name = get_sub_field('car_name');
 					$car_specs = get_sub_field('car_specs');
+					$car_include = get_sub_field('car_include');
+					$car_exclude = get_sub_field('car_exclude');
 					$wa = get_field("pramana_whatsapp", 'option');
 					$phone = get_field("pramana_telephone", 'option');
 					$car_image = get_sub_field('car_image') ?? [];
@@ -58,8 +62,8 @@ get_header();
 											<h5 class="fw-bold mb-3">Harga Mulai <span class="price-highlight"><?php echo $start_price; ?></span></h5>
 
 											<div class="d-flex justify-content-between mt-3 btn-group-sm">
-												<button data-detail="Lorem Ipsum Dolor" class="btn btn-outline-primary showIncludes" data-bs-toggle="modal" data-bs-target="#exampleModal">Include</button>
-												<button data-detail="Lorem Ipsum Dolor" class="btn btn-outline-primary showExcludes" data-bs-toggle="modal" data-bs-target="#exampleModal2">Exclude</button>
+												<button data-detail="Lorem Ipsum Dolor" class="btn btn-outline-primary showIncludes" data-bs-toggle="modal" data-bs-target="#exampleModal_<?= $index ?>">Include</button>
+												<button data-detail="Lorem Ipsum Dolor" class="btn btn-outline-primary showExcludes" data-bs-toggle="modal" data-bs-target="#exampleModal2_<?= $index ?>">Exclude</button>
 											</div>
 											<div class="py-2"></div>
 											<div class="d-flex justify-content-end mt-3 btn-group-sm">
@@ -72,6 +76,37 @@ get_header();
 							</div>
 						</div>
 					</div>
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal_<?= $index ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content text-dark">
+								<div class="modal-header">
+									<h1 class="modal-title text-dark fs-5" id="exampleModalLabel">Includes Car</h1>
+									<button type="button" class="btn-close close-modal1" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body fs-6">
+									<?php echo  $car_include; ?>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal2_<?= $index ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content text-dark">
+								<div class="modal-header">
+									<h1 class="modal-title text-dark fs-5" id="exampleModalLabel">Excludes Car</h1>
+									<button type="button" class="btn-close close-modal2" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<?php echo  $car_exclude; ?>
+								</div>
+							</div>
+						</div>
+					</div>
 				<?php
 				endwhile;
 				?>
@@ -79,36 +114,6 @@ get_header();
 
 		</div>
 	</section>
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Includes Car</h1>
-					<button type="button" class="btn-close close-modal1" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. </p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h1 class="modal-title fs-5" id="exampleModalLabel">Excludes Car</h1>
-					<button type="button" class="btn-close close-modal2" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. </p>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<?php get_template_part('template-parts/general/booking-form'); ?>
 	<?php get_template_part('template-parts/general/locations'); ?>

@@ -21,7 +21,7 @@
               <div class="mb-3">
                 <label class="form-label small">Armada / Mobil</label>
                 <select id="book_car" class="form-select" required>
-                  <?php if (have_rows(selector: 'car_items')): ?>
+                  <?php if (have_rows('car_items')): ?>
                     <?php
                       while (have_rows('car_items')): the_row();
                         $car_name = get_sub_field('car_name');
@@ -59,7 +59,7 @@
               <div class="mb-3">
                 <label class="form-label small">Pilih Paket *</label>
                 <select id="book_packet" class="form-select" required>
-                  <?php if (have_rows(selector: 'tpi_items')): ?>
+                  <?php if (have_rows('tpi_items')): ?>
                     <?php
                       while (have_rows('tpi_items')): the_row();
                         $tour_name = get_sub_field('tpi_name');

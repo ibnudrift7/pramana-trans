@@ -71,7 +71,6 @@ function pramana_scripts() {
 	
 	foreach ($scripts as $key => $dir) {
 		$external_src = [];
-
 		wp_enqueue_script(
 			$key,
 			in_array($key, $external_src) ? $dir : get_template_directory_uri() . $dir,

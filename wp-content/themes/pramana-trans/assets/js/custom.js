@@ -66,13 +66,9 @@ book_tour_btn.forEach(element => {
   });
 });
 
-
-// showIncludes, showExcludes
 const includesBtn = document.querySelectorAll('.showIncludes');
 includes.forEach((include) => {
   include.addEventListener('click', function() {
-    console.log('clicked');
-    return false;
     const modal1 = document.querySelector('#exampleModal');
     modal1.classList.add('show');
     modal1.style.display = 'block';
