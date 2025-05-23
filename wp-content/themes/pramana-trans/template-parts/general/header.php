@@ -17,8 +17,6 @@
 				<a href="<?php echo $fb; ?>" class="facebook"><i class="bi bi-facebook"></i></a>
 				<a href="<?php echo $ig; ?>" class="instagram"><i class="bi bi-instagram"></i></a>
 				<div class="space px-2"></div>
-				<a href="<?php echo home_url(); ?>" class="language-id"><span><img src="<?php echo home_url(). '/assets/img/pc-id.png'; ?>" class="img img-fluid"></span></a>
-				<a href="<?php echo home_url('/en/'); ?>" class="language-en ms-2"><span><img src="<?php echo home_url(). '/assets/img/pc-en.png'; ?>" class="img img-fluid"></span></a>
 			</div>
 		</div>
 	</div><!-- End Top Bar -->
