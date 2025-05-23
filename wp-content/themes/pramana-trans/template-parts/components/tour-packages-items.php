@@ -140,7 +140,6 @@ $header = get_field('tpi_header');
     padding: 10px 20px;
     font-size: 14px;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
 
