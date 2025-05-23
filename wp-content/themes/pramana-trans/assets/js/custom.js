@@ -71,7 +71,7 @@ const carModalBtn = document.querySelectorAll('.carModalBtn');
 carModalBtn.forEach((element) => {
   element.addEventListener('click', function () {
     const modal = document.querySelector('#carModal');
-    const ajaxUrl = "/wp-admin/admin-ajax.php",
+    const ajaxUrl = ajax_vars.ajax_url,
       params = {
         action: 'get_car_details',
         post_id: element.getAttribute('data-post_id'),

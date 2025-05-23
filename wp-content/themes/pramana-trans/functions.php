@@ -79,6 +79,10 @@ function pramana_scripts() {
 			true
 		);
 	}
+
+	wp_localize_script('pramana-custom-js', 'ajax_vars', [
+		'ajax_url' => admin_url('admin-ajax.php')
+	]);
 }
 
 
