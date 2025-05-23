@@ -8,7 +8,7 @@
 <header id="header" class="header sticky-top">
 	<div class="topbar d-flex align-items-center d-none">
 		<div class="container d-flex justify-content-center justify-content-md-between">
-			<div class="contact-info d-flex align-items-center">
+			<div class="contact-info d-flex align-items-center"> 
 				<i class="bi bi-envelope d-flex align-items-center"><a
 						href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></i>
 				<i class="bi bi-phone d-flex align-items-center ms-4"><a href="tel:<?php echo $phone; ?>"><span><?php echo $phone; ?></span></a></i>
@@ -17,8 +17,8 @@
 				<a href="<?php echo $fb; ?>" class="facebook"><i class="bi bi-facebook"></i></a>
 				<a href="<?php echo $ig; ?>" class="instagram"><i class="bi bi-instagram"></i></a>
 				<div class="space px-2"></div>
-				<a href="<?php echo home_url(); ?>" class="language-id"><span>ID</span></a>
-				<a href="<?php echo home_url('/en/'); ?>" class="language-en ms-2"><span>EN</span></a>
+				<a href="<?php echo home_url(); ?>" class="language-id"><span><img src="<?php echo home_url(). '/assets/img/pc-id.png'; ?>" class="img img-fluid"></span></a>
+				<a href="<?php echo home_url('/en/'); ?>" class="language-en ms-2"><span><img src="<?php echo home_url(). '/assets/img/pc-en.png'; ?>" class="img img-fluid"></span></a>
 			</div>
 		</div>
 	</div><!-- End Top Bar -->

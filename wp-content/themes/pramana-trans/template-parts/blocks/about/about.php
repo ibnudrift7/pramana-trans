@@ -48,8 +48,8 @@ $image_url = $image['url'];
     <div class="py-3"></div>
     <div class="row">
       <div class="col-md-12 about-content default-content-black text-dark ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="200">
-        <?php if (have_rows('ab_benefits')): ?>
-          <ul class="list-unstyled d-flex flex-row align-items-end mobile_list">
+        <?php if (have_rows('ab_benefits')):  ?>
+          <ul class="list-unstyled d-flex flex-row align-items-start mobile_list mb-0">
             <?php
             while (have_rows('ab_benefits')): the_row();
               $icon = get_sub_field('ab_benefit_icon');

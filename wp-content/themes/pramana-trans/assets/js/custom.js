@@ -65,3 +65,42 @@ book_tour_btn.forEach(element => {
     document.querySelector('#booking-form-section').scrollIntoView({behavior: 'smooth'});
   });
 });
+
+
+// showIncludes, showExcludes
+const includesBtn = document.querySelectorAll('.showIncludes');
+includes.forEach((include) => {
+  include.addEventListener('click', function() {
+    console.log('clicked');
+    return false;
+    const modal1 = document.querySelector('#exampleModal');
+    modal1.classList.add('show');
+    modal1.style.display = 'block';
+  });
+
+  // hide modal
+  const closeModal = document.querySelector('.close-modal1');
+  closeModal.addEventListener('click', function() {
+    const modal1 = document.querySelector('#exampleModal');
+    modal1.classList.remove('show');
+    modal1.style.display = 'none';
+  });
+});
+
+// showExcludes
+const excludes = document.querySelectorAll('.showExcludes');
+excludes.forEach((exclude) => {
+  exclude.addEventListener('click', function () {
+    const modal2 = document.querySelector('#exampleModal2');
+    modal2.classList.add('show');
+    modal2.style.display = 'block';
+  });
+
+  // hide modal
+  const closeModal = document.querySelector('.close-modal2');
+  closeModal.addEventListener('click', function () {
+    const modal2 = document.querySelector('#exampleModal2');
+    modal2.classList.remove('show');
+    modal2.style.display = 'none';
+  });
+});

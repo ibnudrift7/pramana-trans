@@ -48,7 +48,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Sewa Mobil <?php echo $car_rent_title; ?></h5>
                   <p class="card-text text-muted text-light"><?php echo $car_rent_excerpt; ?></p>
-                  <a href="<?php echo $car_rent_link; ?>" class="btn btn-primary btn-sm">Pesan</a>
+                  <a href="<?php echo $car_rent_link; ?>" class="btn btn-primary btn-sm">Detail</a>
                 </div>
               </div>
             </div>

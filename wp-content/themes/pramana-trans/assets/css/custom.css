@@ -4,6 +4,18 @@
   --secondary-color: #ff9800;
 }
 
+ @font-face {
+    font-family: 'ethno';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/ethnocentric rg.woff') format('woff');
+  }
+
+.header .logo h1{
+    font-family: 'ethno';
+    margin: 0.1rem;
+}
+
 .home-custom-hero {
   min-height: 62vh;
 }
@@ -463,6 +475,10 @@
 .hero.slideHome .carousel-item,
 #heroCarousel {
   height: 100%;
+}
+
+.hero.slideHome.dark-background:before{
+  background: rgba(0, 0, 0, 0.1) !important;
 }
   
 @media (max-width: 992px) {

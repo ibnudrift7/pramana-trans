@@ -1081,12 +1081,14 @@ section,
 .about .about-content ul {
   list-style: none;
   padding: 0;
+  gap: 1rem;
 }
 
 .about .about-content ul li {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 35px;
+  margin-bottom: 0px;
+  margin-top: 0 !important;
 }
 
 .about .about-content ul li:first-child {
