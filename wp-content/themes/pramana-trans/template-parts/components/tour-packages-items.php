@@ -34,10 +34,52 @@ $header = get_field('tpi_header');
                 <div class="mb-4 text-white">
                   <ul class="nav nav-tabs" id="tourTab<?php echo get_row_index(); ?>" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="sub1-tab-<?php echo get_row_index(); ?>" data-bs-toggle="tab" data-bs-target="#sub1-<?php echo get_row_index(); ?>" type="button" role="tab" aria-controls="sub1-<?php echo get_row_index(); ?>" aria-selected="true">Sub 1</button>
+                      <button class="active bg-gold text-black border-0 px-4 py-2 mx-1 elegant-tab-btn"
+                        id="sub1-tab-<?php echo get_row_index(); ?>"
+                        data-bs-toggle="tab"
+                        data-bs-target="#sub1-<?php echo get_row_index(); ?>"
+                        type="button"
+                        role="tab"
+                        aria-controls="sub1-<?php echo get_row_index(); ?>"
+                        aria-selected="true">
+                        Destinasi
+                      </button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="sub2-tab-<?php echo get_row_index(); ?>" data-bs-toggle="tab" data-bs-target="#sub2-<?php echo get_row_index(); ?>" type="button" role="tab" aria-controls="sub2-<?php echo get_row_index(); ?>" aria-selected="false">Sub 2</button>
+                      <button class="bg-gold text-black border-0 px-4 py-2 mx-1 elegant-tab-btn"
+                        id="sub2-tab-<?php echo get_row_index(); ?>"
+                        data-bs-toggle="tab"
+                        data-bs-target="#sub2-<?php echo get_row_index(); ?>"
+                        type="button"
+                        role="tab"
+                        aria-controls="sub2-<?php echo get_row_index(); ?>"
+                        aria-selected="false">
+                        Harga
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="bg-gold text-black border-0 px-4 py-2 mx-1 elegant-tab-btn"
+                        id="sub3-tab-<?php echo get_row_index(); ?>"
+                        data-bs-toggle="tab"
+                        data-bs-target="#sub3-<?php echo get_row_index(); ?>"
+                        type="button"
+                        role="tab"
+                        aria-controls="sub3-<?php echo get_row_index(); ?>"
+                        aria-selected="false">
+                        Iltinerary
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="bg-gold text-black border-0 px-4 py-2 mx-1 elegant-tab-btn"
+                        id="sub4-tab-<?php echo get_row_index(); ?>"
+                        data-bs-toggle="tab"
+                        data-bs-target="#sub4-<?php echo get_row_index(); ?>"
+                        type="button"
+                        role="tab"
+                        aria-controls="sub4-<?php echo get_row_index(); ?>"
+                        aria-selected="false">
+                        Fasilitas
+                      </button>
                     </li>
                   </ul>
                   <div class="tab-content p-3 border border-top-0 rounded-bottom bg-dark" id="tourTabContent<?php echo get_row_index(); ?>">
@@ -84,3 +126,38 @@ $header = get_field('tpi_header');
     </div>
   </div>
 </section>
+
+<style>
+  .elegant-tab-btn.bg-gold {
+    background: #FFD700 !important;
+    color: #222 !important;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  }
+
+  .elegant-tab-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .elegant-tab-btn.bg-gold:hover,
+  .elegant-tab-btn.bg-gold:focus {
+    background:rgb(249, 47, 67) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(200, 35, 51, 0.15);
+  }
+
+  .elegant-tab-btn.active {
+    box-shadow: 0 4px 16px rgba(255, 215, 0, 0.18);
+  }
+</style>
