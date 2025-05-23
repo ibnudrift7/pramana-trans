@@ -15,6 +15,9 @@ $header = get_field('tpi_header');
           $tour_name = get_sub_field('tpi_name');
           $tour_image = get_sub_field('tpi_image');
           $tour_price = get_sub_field('tpi_price');
+          $tour_price_list = get_sub_field('tpi_price_list');
+          $tour_itinerary = get_sub_field('tpi_itinerary');
+          $tour_facilities = get_sub_field('tpi_facilities');
         ?>
           <div class="col-md-6">
             <div class="card bg-black border border-gold h-100">
@@ -34,7 +37,7 @@ $header = get_field('tpi_header');
                 <div class="mb-4 text-white">
                   <ul class="nav nav-tabs" id="tourTab<?php echo get_row_index(); ?>" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="active bg-gold text-black border-0 px-4 py-2 mx-1 elegant-tab-btn"
+                      <button class="active bg-gold text-black border-0 px-4 py-2 me-1 elegant-tab-btn"
                         id="sub1-tab-<?php echo get_row_index(); ?>"
                         data-bs-toggle="tab"
                         data-bs-target="#sub1-<?php echo get_row_index(); ?>"
@@ -88,8 +91,8 @@ $header = get_field('tpi_header');
                         <div class="row">
                           <?php if (have_rows('tpi_destinations')): ?>
                             <?php
-                            while (have_rows('tpi_destinations')): the_row();
-                              $tour_dest = get_sub_field('tpi_destination');
+                              while (have_rows('tpi_destinations')): the_row();
+                                $tour_dest = get_sub_field('tpi_destination');
                             ?>
                               <?php if (get_row_index() % 4 == 1) : ?>
                                 <div class="col-6">
@@ -101,14 +104,20 @@ $header = get_field('tpi_header');
                                 </div>
                               <?php endif; ?>
                             <?php
-                            endwhile;
+                              endwhile;
                             ?>
                           <?php endif; ?>
                         </div>
                       </div>
                     </div>
                     <div class="tab-pane fade text-white" id="sub2-<?php echo get_row_index(); ?>" role="tabpanel" aria-labelledby="sub2-tab-<?php echo get_row_index(); ?>">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugit, laborum repellat aliquid placeat distinctio, veniam quas laudantium dicta animi dolor soluta, quam obcaecati neque quia. Fugit exercitationem labore recusandae.</p>
+                      <?php echo $tour_price_list; ?>
+                    </div>
+                    <div class="tab-pane fade text-white" id="sub3-<?php echo get_row_index(); ?>" role="tabpanel" aria-labelledby="sub2-tab-<?php echo get_row_index(); ?>">
+                      <?php echo $tour_itinerary; ?>
+                    </div>
+                    <div class="tab-pane fade text-white" id="sub4-<?php echo get_row_index(); ?>" role="tabpanel" aria-labelledby="sub2-tab-<?php echo get_row_index(); ?>">
+                      <?php echo $tour_facilities; ?>
                     </div>
                   </div>
                 </div>

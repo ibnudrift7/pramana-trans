@@ -24,7 +24,7 @@
 								$tour_query->the_post(); 
 
 								$tour_title = get_the_title();
-              					$tour_start_price = get_field('tpi_start_price', get_the_ID());
+              	$tour_start_price = get_field('tpi_start_price', get_the_ID());
 								$tour_link = get_permalink();
 								$tour_img_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
 					?>

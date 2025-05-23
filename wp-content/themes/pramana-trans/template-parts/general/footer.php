@@ -29,7 +29,11 @@
 </footer>
 
 <!-- WhatsApp Float Button -->
-<a href="https://wa.me/<?php echo get_field("pramana_telephone", 'option'); ?>" data-wa="<?php echo get_field("pramana_telephone", 'option'); ?>" id="whatsapp-number" class="whatsapp-float" target="_blank">
+<?php
+  $wa_text = get_field("pramana_telephone", 'option');
+  $wa_link = str_replace( '-', '', $wa_text);
+?>
+<a href="https://wa.me/<?php echo $wa_link; ?>" data-wa="<?php echo $wa_link; ?>" id="whatsapp-number" class="whatsapp-float" target="_blank">
   <i class="bi bi-whatsapp"></i>
 </a>
 

@@ -62,47 +62,15 @@ get_header();
 											<h5 class="fw-bold mb-3">Harga Mulai <span class="price-highlight"><?php echo $start_price; ?></span></h5>
 
 											<div class="d-flex justify-content-between mt-3 btn-group-sm">
-												<button data-detail="Lorem Ipsum Dolor" class="btn btn-outline-primary showIncludes" data-bs-toggle="modal" data-bs-target="#exampleModal_<?= $index ?>">Include</button>
-												<button data-detail="Lorem Ipsum Dolor" class="btn btn-outline-primary showExcludes" data-bs-toggle="modal" data-bs-target="#exampleModal2_<?= $index ?>">Exclude</button>
+												<button class="btn btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="include">Include</button>
+												<button class="btn btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="exclude">Exclude</button>
 											</div>
 											<div class="py-2"></div>
 											<div class="d-flex justify-content-end mt-3 btn-group-sm">
 												<button data-car="<?php echo $car_name; ?>" class="btn btn-outline-primary book_car_btn"><i class="fab fa-whatsapp me-1"></i> Booking/Pesan</button>
-												<!-- <a href="tel:<?php echo $phone; ?>" class="btn btn-outline-primary"><i class="fas fa-phone me-1"></i> TELEPON</a> -->
 											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModal_<?= $index ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content text-dark">
-								<div class="modal-header">
-									<h1 class="modal-title text-dark fs-5" id="exampleModalLabel">Includes Car</h1>
-									<button type="button" class="btn-close close-modal1" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body fs-6">
-									<?php echo  $car_include; ?>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-					<!-- Modal -->
-					<div class="modal fade" id="exampleModal2_<?= $index ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog">
-							<div class="modal-content text-dark">
-								<div class="modal-header">
-									<h1 class="modal-title text-dark fs-5" id="exampleModalLabel">Excludes Car</h1>
-									<button type="button" class="btn-close close-modal2" data-bs-dismiss="modal" aria-label="Close"></button>
-								</div>
-								<div class="modal-body">
-									<?php echo  $car_exclude; ?>
 								</div>
 							</div>
 						</div>
@@ -118,6 +86,19 @@ get_header();
 	<?php get_template_part('template-parts/general/booking-form'); ?>
 	<?php get_template_part('template-parts/general/locations'); ?>
 </main>
+
+<!-- Modal -->
+<div class="modal fade" id="carModal" tabindex="-1" aria-labelledby="carModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content text-dark">
+			<div class="modal-header">
+				<h2 class="modal-title text-dark fs-5" id="carModalLabel"></h2>
+				<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body fs-6"></div>
+		</div>
+	</div>
+</div>
 
 <?php
 get_footer();

@@ -66,37 +66,47 @@ book_tour_btn.forEach(element => {
   });
 });
 
-const includesBtn = document.querySelectorAll('.showIncludes');
-includes.forEach((include) => {
-  include.addEventListener('click', function() {
-    const modal1 = document.querySelector('#exampleModal');
-    modal1.classList.add('show');
-    modal1.style.display = 'block';
+// openModal
+const carModalBtn = document.querySelectorAll('.carModalBtn');
+carModalBtn.forEach((element) => {
+  element.addEventListener('click', function () {
+    const modal = document.querySelector('#carModal');
+    const ajaxUrl = "/wp-admin/admin-ajax.php",
+      params = {
+        action: 'get_car_details',
+        post_id: element.getAttribute('data-post_id'),
+        row_index: element.getAttribute('data-row_index'),
+        target_field: element.getAttribute('data-target_field'),
+      };
+
+    fetch(ajaxUrl, {
+        method: 'POST',
+        body: new URLSearchParams(params)
+    })
+    .then(res => {
+      if ( res.status != 200 ) {
+        throw new Error(res.message);
+      }
+      return res.json();
+    })
+    .then(response => {
+      console.log(response.data);
+      console.log(response.data.modal_title);
+      console.log(response.data.modal_include);
+      modal.querySelector('.modal-title').innerHTML = response.data.modal_title;
+      modal.querySelector('.modal-body').innerHTML = response.data['modal_' + params.target_field];
+
+      const carModal = new bootstrap.Modal(modal);
+      carModal.show();
+    })
+    .catch(err => console.error("Error:", err));
   });
 
   // hide modal
-  const closeModal = document.querySelector('.close-modal1');
-  closeModal.addEventListener('click', function() {
-    const modal1 = document.querySelector('#exampleModal');
-    modal1.classList.remove('show');
-    modal1.style.display = 'none';
-  });
-});
-
-// showExcludes
-const excludes = document.querySelectorAll('.showExcludes');
-excludes.forEach((exclude) => {
-  exclude.addEventListener('click', function () {
-    const modal2 = document.querySelector('#exampleModal2');
-    modal2.classList.add('show');
-    modal2.style.display = 'block';
-  });
-
-  // hide modal
-  const closeModal = document.querySelector('.close-modal2');
+  const closeModal = document.querySelector('.close-modal');
   closeModal.addEventListener('click', function () {
-    const modal2 = document.querySelector('#exampleModal2');
-    modal2.classList.remove('show');
-    modal2.style.display = 'none';
+    const modal = document.querySelector('#carModal');
+    modal.classList.remove('show');
+    modal.style.display = 'none';
   });
 });

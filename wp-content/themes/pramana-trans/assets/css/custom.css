@@ -4,16 +4,20 @@
   --secondary-color: #ff9800;
 }
 
- @font-face {
-    font-family: 'ethno';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../font/ethnocentric rg.woff') format('woff');
-  }
+@font-face {
+  font-family: 'ethno';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../font/ethnocentric rg.woff') format('woff');
+}
 
-.header .logo h1{
-    font-family: 'ethno';
-    margin: 0.1rem;
+.menu-item-object-language_switcher .trp-flag-image {
+  margin: 0;
+}
+
+.header .logo h1 {
+  font-family: 'ethno';
+  margin: 0.1rem;
 }
 
 .home-custom-hero {
@@ -218,6 +222,10 @@
 
 .footer {
   background-color: #474747;
+}
+
+.footer .footer-about a {
+  font-family: 'ethno';
 }
 
 .whatsapp-float {

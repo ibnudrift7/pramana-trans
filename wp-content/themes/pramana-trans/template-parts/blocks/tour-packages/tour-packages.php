@@ -40,10 +40,8 @@
 <?php if ($template == 'home') : ?>
   <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>">
     <div class="container py-5">
-      <div class="text-center block_titles mb-5">
-        <h2 class="section-title text-dark" data-aos="fade-up" data-aos-delay="200">Paket Tour</h2>
-      </div>
-      <div class="row gy-4">
+      <h2 class="section-title text-dark"><?php echo $header; ?></h2>
+      <div class="row g-4">
         <?php if (have_rows('tpac_items')): ?>
           <?php
             while (have_rows('tpac_items')): the_row();
@@ -53,16 +51,17 @@
               $tpac_img_url = get_the_post_thumbnail_url($post_id, 'full');
               $tpac_link = get_permalink($post_id);
           ?>
-              <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-item position-relative py-4 bg-white">
-                  <div class="img pb-3">
-                    <img src="<?php echo $tpac_img_url; ?>" alt="<?php echo $tpac_title; ?>" class="img-fluid">
+              <div class="col-md-6 col-lg-3">
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="<?php echo $tpac_img_url; ?>" alt="<?php echo $tpac_title; ?>">
+                    <div class="location-badge"><?php echo strtoupper($tpac_title); ?></div>
                   </div>
-                  <h5>
-                    <a href="<?php echo $tpac_link; ?>" class="stretched-link"><small>Tour</small>
-                      <?php echo $tpac_title; ?></a>
-                    <p class="m-0 text-white pt-3">Lihat Detail</p>
-                  </h5>
+                  <div class="card-body">
+                    <h5 class="card-title">Paket Wisata <?php echo $tpac_title; ?></h5>
+                    <p class="card-text text-muted text-light">Mulai dari <?php echo $tour_start_price; ?></p>
+                    <a href="<?php echo $tpac_link; ?>" class="btn btn-primary btn-sm">Detail</a>
+                  </div>
                 </div>
               </div>
           <?php 
@@ -72,7 +71,7 @@
       </div>
     </div>
   </section>
-<?php else: ?>
+<?php else : ?>
   <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>">
     <div class="container py-5">
       <h2 class="section-title pb-5"><?php echo $header; ?></h2>

@@ -91,7 +91,6 @@ function register_acf_blocks() {
 		'why-choose-us',
 		'trusted-partner',
 		'car-rent',
-		'car-rent-home',
 		'tour-packages',
 		'more-services',
 		// 'bus-rent',
@@ -125,176 +124,58 @@ function admin_bar_render() {
 	}
 }
 
-// add_filter( 'body_class','custom_body_classes' );
-// function custom_body_classes( $classes ) {
-// 	if ( is_front_page() ) {
-// 		$classes[] = 'page-home';
-// 	} else if ( is_page( 'about-us' ) || is_page( 13 ) ) {
-// 		$classes[] = 'page-about-us';
-// 	} else if ( is_page( 'career' ) ) {
-// 		$classes[] = 'page-career';
-// 	} else if ( is_page( 'portfolio' ) ) {
-// 		$classes[] = 'page-portfolio';
-// 	} else if ( is_page( 'news' ) ) {
-// 		$classes[] = 'page-news';
-// 	} else if ( is_page( 'contact-us' ) ) {
-// 		$classes[] = 'page-contact';
-// 	} else if ( is_singular( 'portfolios' ) ) {
-// 		$classes[] = 'page-portfolio-detail';
-// 	} else if ( is_singular( 'news_list' ) ) {
-// 		$classes[] = 'page-news-detail';
-// 	} else if ( is_singular( 'careers' ) ) {
-// 		$classes[] = 'page-career-detail';
-// 	}
+add_action( 'wp_ajax_nopriv_get_car_details', 'get_car_details_ajax' );
+add_action( 'wp_ajax_get_car_details', 'get_car_details_ajax' );
+function get_car_details_ajax() {
+	$post_id = isset( $_REQUEST["post_id"] ) ? intval( $_REQUEST["post_id"] ) : '';
+	$row_index = isset( $_REQUEST["row_index"] ) ? intval( $_REQUEST["row_index"] ) : '';
+	$target_field = isset( $_REQUEST["target_field"] ) ? $_REQUEST["target_field"] : '-';
+	$title = ucfirst($target_field);
+
+	if (!$post_id || !$row_index ) {
+		$response = json_encode( 
+			[
+				'status' => 404, 
+				'message' => 'No data found',
+			]
+		);
+	} 
+	else {
+		$car_items = get_field('car_items', $post_id);
 		
-// 	return $classes;
-// }
+		if ($car_items) {
+			$car_item = $car_items[$row_index - 1];
+			$car_include = $car_item['car_include'];
+			$car_exclude = $car_item['car_exclude'];
 
-//Custom Theme Settings
-/*
-add_action('admin_menu', 'add_gcf_interface');
-function add_gcf_interface() {
-	add_options_page('Porta Settings', 'Porta Settings', '8', 'functions', 'globalcustomfields');
+			$response = json_encode( 
+			[
+				'status' => 200,
+				'message' => 'Data found',
+				'data' => [
+					'modal_title' => $title,
+					'modal_include' => $car_include,
+					'modal_exclude' => $car_exclude,
+				],
+			]
+		);
+		}
+	}
+
+	echo $response;
+	wp_die();
 }
 
-function globalcustomfields() {
-	wp_enqueue_script('jquery');
-	// This will enqueue the Media Uploader script
-	wp_enqueue_media();    
-?>
-	<style type="text/css">
-		.image_preview {
-			width: 200px;
-			height: auto;
-			display: block;
-			margin: 15px 0;
-		}
-		textarea {
-			height: 75px;
-		}
-		hr {
-			margin: 30px 0;
-			border-width: 2px;
-		}
-	</style>
-    <div class='wrap'>
-    	<h2>Porta Settings</h2>
-	    <form method="post" action="options.php">
-		    <?php wp_nonce_field('update-options') ?>
 
-		    <h2>General Options</h2>
-		    <div>
-			    <p><strong>Porta Black Logo</strong><br />
-			    <?php if (get_option('porta_black_logo') != "") { ?>
-			    	<img src="<?php echo get_option('porta_black_logo'); ?>" class="image_preview" />
-			    <?php } ?>
-			    <input type="text" name="porta_black_logo" id="porta_black_logo" class="regular-text" value="<?php echo get_option('porta_black_logo'); ?>">
-			    <input type="button" name="upload-btn" class="upload-btn" class="button-secondary" value="Choose Image">
-			</div>
+/**
+ * Lowers the metabox priority to 'core' for Yoast SEO's metabox.
+ *
+ * @param string $priority The current priority.
+ *
+ * @return string $priority The potentially altered priority.
+ */
 
-			<div>
-			    <p><strong>Porta White Logo</strong><br />
-			    <?php if (get_option('porta_white_logo') != "") { ?>
-			    	<img src="<?php echo get_option('porta_white_logo'); ?>" class="image_preview" />
-			    <?php } ?>
-			    <input type="text" name="porta_white_logo" id="porta_white_logo" class="regular-text" value="<?php echo get_option('porta_white_logo'); ?>">
-			    <input type="button" name="upload-btn" class="upload-btn" class="button-secondary" value="Choose Image">
-			</div>
-
-		    <p><strong>Phone</strong><br />
-		    <input class="regular-text" type="text" name="porta_phone" value="<?php echo get_option('porta_phone'); ?>" /></p>
-
-		    <p><strong>Phone Text (Phone Label)</strong><br />
-		    <input class="regular-text" type="text" name="porta_phone_label" value="<?php echo get_option('porta_phone_label'); ?>" /></p>
-
-		    <p><strong>Email</strong><br />
-		    <input class="regular-text" type="text" name="porta_email" value="<?php echo get_option('porta_email'); ?>" /></p>
-
-		    <p><strong>Full Address (Show on the Contact Us Page)</strong><br />
-		    <textarea class="regular-text" name="porta_full_address"><?php echo get_option('porta_full_address'); ?></textarea></p>
-
-		    <p><strong>Instagram</strong><br />
-		    <input class="regular-text" type="text" name="porta_instagram" value="<?php echo get_option('porta_instagram'); ?>" /></p>
-
-		    <p><strong>Facebook</strong><br />
-		    <input class="regular-text" type="text" name="porta_facebook" value="<?php echo get_option('porta_facebook'); ?>" /></p>
-
-		    <p><strong>Behance</strong><br />
-		    <input class="regular-text" type="text" name="porta_behance" value="<?php echo get_option('porta_behance'); ?>" /></p>
-
-		    <p><strong>Linkedin</strong><br />
-		    <input class="regular-text" type="text" name="porta_linkedin" value="<?php echo get_option('porta_linkedin'); ?>" /></p>
-
-		    <hr>
-
-		    <h2>Footer Options</h2>
-
-		    <p><strong>Footer Address</strong><br />
-		    <input class="regular-text" type="text" name="porta_footer_address" value="<?php echo get_option('porta_footer_address'); ?>" /></p>
-
-		    <p><strong>Footer Big Text</strong><br />
-		    <input class="regular-text" type="text" name="porta_footer_big_text" value="<?php echo get_option('porta_footer_big_text'); ?>" /></p>
-
-		    <p><strong>Footer Copyright Text</strong><br />
-		    <input class="regular-text" type="text" name="porta_footer_copyright" value="<?php echo get_option('porta_footer_copyright'); ?>" /></p>
-
-		    <div>
-			    <p><strong>Footer Logo 1</strong><br />
-			    <?php if (get_option('porta_footer_logo_1') != "") { ?>
-			    	<img src="<?php echo get_option('porta_footer_logo_1'); ?>" class="image_preview" />
-			    <?php } ?>
-			    <input type="text" name="porta_footer_logo_1" id="porta_footer_logo_1" class="regular-text" value="<?php echo get_option('porta_footer_logo_1'); ?>">
-			    <input type="button" name="upload-btn" class="upload-btn" class="button-secondary" value="Choose Image">
-			</div>
-
-			<div>
-			    <p><strong>Footer Logo 2</strong><br />
-			    <?php if (get_option('porta_footer_logo_2') != "") { ?>
-			    	<img src="<?php echo get_option('porta_footer_logo_2'); ?>" class="image_preview" />
-			    <?php } ?>
-			    <input type="text" name="porta_footer_logo_2" id="porta_footer_logo_2" class="regular-text" value="<?php echo get_option('porta_footer_logo_2'); ?>">
-			    <input type="button" name="upload-btn" class="upload-btn" class="button-secondary" value="Choose Image">
-			</div>
-
-
-		    <p><input class="button button-primary" type="submit" name="Submit" value="Update Options" /></p>
-
-		    <input type="hidden" name="action" value="update" />
-		    <input type="hidden" name="page_options" value="porta_black_logo,porta_white_logo,porta_phone,porta_phone_label,porta_email,porta_full_address,porta_instagram,porta_facebook,porta_behance,porta_linkedin,porta_footer_big_text,porta_footer_copyright,porta_footer_logo_1,porta_footer_logo_2,porta_footer_address" />
-	    </form>
-    </div>
-
-    <script type="text/javascript">
-		jQuery(document).ready(function($){
-		    $('.upload-btn').click(function(element) {
-		        element.preventDefault();
-		        var image = wp.media({ 
-		            title: 'Upload Image',
-		            // mutiple: true if you want to upload multiple files at once
-		            multiple: false
-		        }).open()
-		        .on('select', function(e){
-		            // This will return the selected image from the Media Uploader, the result is an object
-		            var uploaded_image = image.state().get('selection').first();
-		            
-		            // We convert uploaded_image to a JSON object to make accessing it easier
-		            // Output to the console uploaded_image
-		            // console.log(uploaded_image);
-		            
-		            var image_url = uploaded_image.toJSON().url;
-		            
-		            // Let's assign the url value to the input field
-		            if ($(element.currentTarget).parent().find('.image_preview').length == 0) {
-		            	$('<img src="' + image_url + '" class="image_preview" />').
-		            			insertBefore( $(element.currentTarget).parent().find('input[type="text"]') );
-		            } else {
-		            	$(element.currentTarget).parent().find('.image_preview').attr("src", image_url);
-		            }
-		            $(element.currentTarget).parent().find('input[type="text"]').val(image_url);
-		        });
-		    });
-		});
-	</script>
-    <?php
+add_filter( 'wpseo_metabox_prio', 'lower_yoast_metabox_priority' );
+function lower_yoast_metabox_priority( $priority ) {
+  return 'core';
 }
-*/
