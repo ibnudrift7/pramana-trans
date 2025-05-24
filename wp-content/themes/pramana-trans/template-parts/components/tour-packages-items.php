@@ -1,7 +1,7 @@
 <?php
 
 // Create class attribute allowing for custom "className" and "align" values.
-$class_name = 'py-5';
+$class_name = 'py-5 detail_customsTour';
 $header = get_field('tpi_header');
 ?>
 

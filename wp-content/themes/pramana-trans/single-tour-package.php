@@ -6,7 +6,7 @@
 	<?php the_content(); ?>
 
 	<?php if (has_category('tour-city')) : ?>
-		<section  class="py-5">
+		<section  class="py-5" id="tour-city">
 			<div class="container py-5">
 				<h2 class="section-title">Temukan Liburan - Paket Wisata <?php echo get_the_title(); ?></h2>
 				<div class="row g-4">

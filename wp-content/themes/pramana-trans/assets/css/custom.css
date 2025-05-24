@@ -544,4 +544,14 @@
     letter-spacing: 0px !important;
   }
 
+  .package-details p,
+  .package-details ul li,
+  .package-details{
+    font-size: 13px;
+  }
+
+  .detail_customsTour .container .row .col-md-6{
+    margin-bottom: 1rem;
+  }
+
 }
