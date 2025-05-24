@@ -593,4 +593,9 @@
     z-index: 2 !important;
   }
 
+  .hero.slideHome .carousel-item, 
+  #heroCarousel{
+    height: 320px;
+  }
+
 }
