@@ -598,4 +598,11 @@
     height: 320px;
   }
 
+  .about .about-content h3{
+    font-size: 21px;
+  }
+  .about .about-content ul p{
+    font-size: 14px;
+  }
+
 }
