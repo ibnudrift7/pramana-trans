@@ -25,7 +25,8 @@
 
   switch ($template) {
     case 'home':
-      $class_name = 'featured-services section py-5 silver-background2';
+      // silver-background2
+      $class_name = 'featured-services section py-5 bg-dark';
       break;
     default:
       $class_name = 'py-5';
@@ -40,7 +41,7 @@
 <?php if ($template == 'home') : ?>
   <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>">
     <div class="container py-5">
-      <h2 class="section-title text-dark"><?php echo $header; ?></h2>
+      <h2 class="section-title text-gold mb-4"><?php echo $header; ?></h2>
       <div class="row g-4">
         <?php if (have_rows('tpac_items')): ?>
           <?php
