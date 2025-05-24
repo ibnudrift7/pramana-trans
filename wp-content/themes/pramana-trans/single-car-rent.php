@@ -61,7 +61,7 @@ get_header();
 											<div class="py-4"></div>
 											<h5 class="fw-bold mb-3">Harga Mulai <span class="price-highlight"><?php echo $start_price; ?></span></h5>
 
-											<div class="d-flex justify-content-between mt-3 btn-group-sm">
+											<div class="d-flex justify-content-between mt-3 btn-group-sm customsMobBtn">
 												<div class="itn d-flex gap-2">
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="include">Include</button>
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="exclude">Exclude</button>
