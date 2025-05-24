@@ -5,7 +5,7 @@ get_header();
 <main class="main">
 	<?php the_content(); ?>
 
-	<section class="py-5">
+	<section id="car-details" class="py-5">
 		<!-- Car Listings -->
 		<div class="container py-5">
 			<?php if (have_rows('car_items')): ?>
@@ -65,7 +65,7 @@ get_header();
 												<div class="itn d-flex gap-2">
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="include">Include</button>
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="exclude">Exclude</button>
-													<button class="btn btn-outline-primary btn-sm">Fasilitas</button>
+													<button class="btn btn-outline-primary btn-sm carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="facility">Fasilitas</button>
 												</div>
 												<div class="itn d-flex gap-2">
 													<button data-car="<?php echo $car_name; ?>" class="btn btn-sm btn-outline-primary book_car_btn">Booking</button>

@@ -77,7 +77,7 @@
                         <h1 class="fw-bold"><?php echo $header ?></h1>
                         <?php echo $desc; ?>
                         <?php if ($link) : ?>
-                          <button href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-warning text-white fw-bold mb-4"><?php echo $link['title']; ?></button>
+                          <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-warning text-white fw-bold mb-4"><?php echo $link['title']; ?></a>
                         <?php endif ?>
                     </div>
                 </div>

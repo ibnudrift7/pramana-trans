@@ -135,6 +135,15 @@ function get_car_details_ajax() {
 	$row_index = isset( $_REQUEST["row_index"] ) ? intval( $_REQUEST["row_index"] ) : '';
 	$target_field = isset( $_REQUEST["target_field"] ) ? $_REQUEST["target_field"] : '-';
 	$title = ucfirst($target_field);
+	$language = get_locale();
+
+	if ($language == 'id_ID') {
+		switch ($title) {
+			case 'Facility':
+				$title = 'Fasilitas';
+				break;
+		}
+	}
 
 	if (!$post_id || !$row_index ) {
 		$response = json_encode( 
@@ -151,6 +160,7 @@ function get_car_details_ajax() {
 			$car_item = $car_items[$row_index - 1];
 			$car_include = $car_item['car_include'];
 			$car_exclude = $car_item['car_exclude'];
+			$car_facilities = $car_item['car_facilities'];
 
 			$response = json_encode( 
 			[
@@ -160,6 +170,7 @@ function get_car_details_ajax() {
 					'modal_title' => $title,
 					'modal_include' => $car_include,
 					'modal_exclude' => $car_exclude,
+					'modal_facility' => $car_facilities,
 				],
 			]
 		);

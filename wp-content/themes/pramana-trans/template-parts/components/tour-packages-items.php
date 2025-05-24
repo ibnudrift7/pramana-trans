@@ -5,7 +5,7 @@ $class_name = 'py-5 detail_customsTour';
 $header = get_field('tpi_header');
 ?>
 
-<section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>">
+<section id="tour-packages" class="<?php echo esc_attr($class_name); ?>">
   <div class="container py-5">
     <h2 class="section-title pb-5"><?php echo $header; ?></h2>
     <div class="row">
