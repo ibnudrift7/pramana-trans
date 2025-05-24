@@ -513,4 +513,17 @@
     min-height: inherit !important;
     height: auto !important;
   }
+
+  .header .logo h1{
+    font-size: 1rem;
+  }
+
+  .customs_ptrn.about{
+    background: none !important;
+    background-color: #f8f8f8 !important;
+  }
+  .customs_ptrn.about .container .row{
+    padding: 0 15px;
+  }
+
 }
