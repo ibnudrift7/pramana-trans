@@ -36,12 +36,11 @@
               <div class="mb-3">
                 <label class="form-label small">Durasi Sewa *</label>
                 <select id="book_duration" class="form-select" required>
-                  <option>6 Jam</option>
                   <option>12 Jam</option>
                   <option>Fullday</option>
                 </select>
               </div>
-              <button class="btn btn-warning text-white">BOOKING SEKARANG</button>
+              <button class="btn btn-warning text-white mb-4">BOOKING SEKARANG</button>
             </div>
           </form>
         <?php else: ?>
@@ -83,7 +82,7 @@
                 <label class="form-label small">Lokasi Penjemputan *</label>
                 <input id="book_pickup_location" type="text" class="form-control" required>
               </div>
-              <button class="btn btn-warning text-white">BOOKING SEKARANG</button>
+              <button class="btn btn-warning text-white mb-4">BOOKING SEKARANG</button>
             </div>
           </form>
         <?php endif; ?>
