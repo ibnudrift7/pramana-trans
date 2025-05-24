@@ -537,5 +537,11 @@
   .customs_ptrn.about .container .row{
     padding: 0 15px;
   }
+  .elegant-tab-btn.bg-gold{
+    font-size: 0.65rem !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0 1px !important;
+    letter-spacing: 0px !important;
+  }
 
 }
