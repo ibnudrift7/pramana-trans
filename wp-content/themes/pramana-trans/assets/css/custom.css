@@ -554,6 +554,11 @@
   font-size: 14px !important;
 }
 
+.hero.slideHome .carousel-item, 
+  #heroCarousel{
+    height: 465px;
+  }
+
 @media (max-width: 992px) {
   .hero.slideHome {
     min-height: auto;
