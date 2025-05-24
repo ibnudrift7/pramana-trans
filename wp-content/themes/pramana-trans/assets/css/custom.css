@@ -499,6 +499,18 @@
   background-size: cover !important;
 }
 
+.btn-sm{
+  font-size: 0.8rem !important;
+}
+.btn-outline-primary{
+  background-color: #f8c300 !important;
+  color: #000 !important;
+}
+.btn-outline-primary:hover{
+  background-color: #e0b000 !important;
+  color: #000 !important;
+}
+
 @media (max-width: 992px) {
   .hero.slideHome {
     min-height: auto;

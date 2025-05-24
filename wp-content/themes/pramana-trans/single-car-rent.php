@@ -37,7 +37,7 @@ get_header();
 							<div class="col-md-8">
 								<div class="card-body d-flex flex-column justify-content-center h-100">
 									<div class="row">
-										<div class="col-md-6">
+										<div class="col-md-5">
 											<h6 class="text-secondary text-white text-bold mb-2">HARGA SEWA</h6>
 											<?php if (have_rows('car_rent_type')): ?>
 												<table class="price-table">
@@ -57,17 +57,19 @@ get_header();
 												</table>
 											<?php endif; ?>
 										</div>
-										<div class="col-md-6">
+										<div class="col-md-7">
 											<div class="py-4"></div>
 											<h5 class="fw-bold mb-3">Harga Mulai <span class="price-highlight"><?php echo $start_price; ?></span></h5>
 
 											<div class="d-flex justify-content-between mt-3 btn-group-sm">
-												<button class="btn btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="include">Include</button>
-												<button class="btn btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="exclude">Exclude</button>
-											</div>
-											<div class="py-2"></div>
-											<div class="d-flex justify-content-end mt-3 btn-group-sm">
-												<button data-car="<?php echo $car_name; ?>" class="btn btn-outline-primary book_car_btn"><i class="fab fa-whatsapp me-1"></i> Booking/Pesan</button>
+												<div class="itn d-flex gap-2">
+													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="include">Include</button>
+													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="exclude">Exclude</button>
+													<button class="btn btn-outline-primary btn-sm">Fasilitas</button>
+												</div>
+												<div class="itn d-flex gap-2">
+													<button data-car="<?php echo $car_name; ?>" class="btn btn-sm btn-outline-primary book_car_btn">Booking</button>
+												</div>
 											</div>
 										</div>
 									</div>
