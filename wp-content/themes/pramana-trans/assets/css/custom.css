@@ -224,7 +224,7 @@
   background-color: #474747;
 }
 
-.footer .footer-about a {
+.footer .footer-about a .sitename {
   font-family: 'ethno';
 }
 
