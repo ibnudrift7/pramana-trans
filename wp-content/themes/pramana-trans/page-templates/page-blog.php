@@ -151,22 +151,6 @@
                 ?>
               </ul>
             </div>
-
-            <!-- Tags -->
-            <div class="tags">
-              <h4>Tags</h4>
-              <div class="d-flex flex-wrap gap-2">
-                <?php
-                  $tags = get_tags();
-                  
-                  if ($tags) {
-                    foreach($tags as $tag) {
-                      echo '<a href="' . get_tag_link($tag->term_id ) .  '" class="badge bg-light text-dark p-2">' . $tag->name . '</a>'; 
-                    }
-                  }
-                ?>
-              </div>
-            </div>
           </div>
         </div>
         <!-- end Sidebar -->
