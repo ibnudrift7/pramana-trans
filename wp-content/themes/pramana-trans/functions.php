@@ -55,6 +55,8 @@ function pramana_styles() {
 
 add_action('wp_enqueue_scripts', 'pramana_scripts');
 function pramana_scripts() {
+	wp_enqueue_script( 'jquery' );
+	
 	$scripts = [
 		'bootstrap-bundle-js' => '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
 		'validate-js' => '/assets/vendor/php-email-form/validate.js',
