@@ -651,7 +651,10 @@
 
   .hero.slideHome .carousel-item, 
   #heroCarousel{
-    height: 320px;
+    height: 190px;
+  }
+  .hero.slideHome .carousel-item h2.section-title.text-yellow{
+    display: none;
   }
 
   .about .about-content h3{
