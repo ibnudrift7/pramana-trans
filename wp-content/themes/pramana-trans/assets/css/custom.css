@@ -15,6 +15,10 @@
   margin: 0;
 }
 
+.menu-item-object-language_switcher .trp-ls-language-name {
+  display: none;
+}
+
 .header .logo h1 {
   font-family: 'ethno';
   margin: 0.1rem;
@@ -524,6 +528,14 @@
   }
   .hero.slideHome:before {
     background-color: transparent !important;
+  }
+
+  .menu-item-object-language_switcher .trp-flag-image {
+    margin: -1px 5px;
+  }
+
+  .menu-item-object-language_switcher .trp-ls-language-name {
+    display: inline-block;
   }
 }
 
