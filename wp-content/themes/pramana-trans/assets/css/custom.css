@@ -511,6 +511,13 @@
   color: #000 !important;
 }
 
+.bg-client-trusted{
+  background-color: #212529;
+}
+.clients .swiper-slide img{
+  filter: invert(1);
+}
+
 @media (max-width: 992px) {
   .hero.slideHome {
     min-height: auto;
