@@ -11,6 +11,11 @@
 
         <!-- Blog Content -->
         <div class="col-lg-9">
+          <?php
+            $date_raw = get_post_timestamp();
+            $date = date("M d, Y", $date_raw);
+          ?>
+          <div class="post-date fw-bold mb-4"><?php echo $date; ?></div>
           <?php the_content(); ?>
         </div>
 
