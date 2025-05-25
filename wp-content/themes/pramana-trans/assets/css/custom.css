@@ -713,4 +713,9 @@
     margin: 0 auto;
   }
 
+  .hero_mobil_detail{
+    overflow: hidden;
+    position: relative;
+  }
+
 }
