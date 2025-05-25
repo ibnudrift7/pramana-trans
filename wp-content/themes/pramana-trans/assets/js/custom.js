@@ -1,112 +1,130 @@
-const book_car_form = document.querySelector('#book_car_form'),
-  book_tour_form = document.querySelector('#book_tour_form'),
-  book_car_btn = document.querySelectorAll('.book_car_btn'),
-  book_tour_btn = document.querySelectorAll('.book_tour_btn');
+// const book_car_form = document.querySelector('#book_car_form'),
+//   book_tour_form = document.querySelector('#book_tour_form'),
+//   book_car_btn = document.querySelectorAll('.book_car_btn'),
+//   book_tour_btn = document.querySelectorAll('.book_tour_btn');
 
 let whatsapp_number = document.getElementById('whatsapp-number').getAttribute('data-wa');
 whatsapp_number = whatsapp_number.replace(/\s/g, '').replace(/-/g, '');
 
-if ( book_car_form ) {
-  book_car_form.addEventListener('submit', function(e) {
+jQuery( document ).ready(function($) {
+  $('#book_car_form').on('submit', function(e) {
     e.preventDefault();
 
-    const book_name = document.getElementById('book_name'),
-      book_phone = document.getElementById('book_phone'),
-      book_car = document.getElementById('book_car'),
-      book_duration = document.getElementById('book_duration');
-    
+    const book_name = $('#book_name').val(),
+      book_phone = $('#book_phone').val(),
+      book_car = $('#book_car').val(),
+      book_duration = $('#book_duration').val();
+
     let text = `Halo, saya mau sewa mobil %0a%0a` +
-      `Nama: ${book_name.value} %0a` +
-      `No. Telp / WA: ${book_phone.value} %0a` +
-      `Car: ${book_car.value} %0a` +
-      `Durasi: ${book_duration.value} %0a`;
+      `Nama: ${book_name} %0a` +
+      `No. Telp / WA: ${book_phone} %0a` +
+      `Car: ${book_car} %0a` +
+      `Durasi: ${book_duration} %0a`;
 
     window.location = 'https://wa.me/' + whatsapp_number + '?text=' + text; 
   });
-}
 
-if ( book_tour_form ) {
-  book_tour_form.addEventListener('submit', function(e) {
+  $('#book_tour_form').on('submit', function(e) {
     e.preventDefault();
 
-    const book_name = document.getElementById('book_name'),
-      book_qty = document.getElementById('book_qty'),
-      book_packet = document.getElementById('book_packet'),
-      book_start_date = document.getElementById('book_start_date'),
-      book_pickup_time = document.getElementById('book_pickup_time'),
-      book_pickup_location = document.getElementById('book_pickup_location');
+    const book_name = $('#book_name').val(),
+      book_qty = $('#book_qty').val(),
+      book_packet = $('#book_packet').val(),
+      book_start_date = $('#book_start_date').val(),
+      book_pickup_time = $('#book_pickup_time').val(),
+      book_pickup_location = $('#book_pickup_location').val();
     
     let text = `Halo, saya mau booking tour %0a%0a` +
-      `Nama: ${book_name.value} %0a` +
-      `Qty: ${book_qty.value} %0a` +
-      `Paket Tour: ${book_packet.value} %0a` +
-      `Tanggal Mulai Tour: ${book_start_date.value} %0a` +
-      `Tanggal Penjemputan: ${book_pickup_time.value} %0a` +
-      `Lokasi Penjemputan: ${book_pickup_location.value} %0a`;
+      `Nama: ${book_name} %0a` +
+      `Qty: ${book_qty} %0a` +
+      `Paket Tour: ${book_packet} %0a` +
+      `Tanggal Mulai Tour: ${book_start_date} %0a` +
+      `Tanggal Penjemputan: ${book_pickup_time} %0a` +
+      `Lokasi Penjemputan: ${book_pickup_location} %0a`;
   
     window.location = 'https://wa.me/' + whatsapp_number + '?text=' + text; 
   });
-}
 
-book_car_btn.forEach(element => {
-  element.addEventListener('click', function(event) {
-    const car_name = this.getAttribute('data-car');
+  $('.book_car_btn').on('click', function(e) {
+    const car_name = $(this).attr('data-car');
     
-    document.querySelector('#book_car').value = car_name;
+    $('#book_car').val(car_name);
     document.querySelector('#booking-form-section').scrollIntoView({behavior: 'smooth'});
   });
-});
 
-book_tour_btn.forEach(element => {
-  element.addEventListener('click', function(event) {
-    const tour_name = this.getAttribute('data-tour');
+  $('.book_tour_btn').on('click', function(e) {
+    const tour_name = $(this).attr('data-tour');
     
-    document.querySelector('#book_packet').value = tour_name;
+    $('#book_packet').val(tour_name);
     document.querySelector('#booking-form-section').scrollIntoView({behavior: 'smooth'});
   });
-});
 
-// openModal
-const carModalBtn = document.querySelectorAll('.carModalBtn');
-carModalBtn.forEach((element) => {
-  element.addEventListener('click', function () {
-    const modal = document.querySelector('#carModal');
-    const ajaxUrl = ajax_vars.ajax_url,
+  $('.carModalBtn').on('click', function () {
+    const $this = $(this),
+      modal = $('#carModal'),
+      ajaxUrl = ajax_vars.ajax_url,
       params = {
         action: 'get_car_details',
-        post_id: element.getAttribute('data-post_id'),
-        row_index: element.getAttribute('data-row_index'),
-        target_field: element.getAttribute('data-target_field'),
+        post_id: $this.data('post_id'),
+        row_index: $this.data('row_index'),
+        target_field: $this.data('target_field')
       };
 
-    fetch(ajaxUrl, {
-        method: 'POST',
-        body: new URLSearchParams(params)
-    })
-    .then(res => {
-      if ( res.status != 200 ) {
-        throw new Error(res.message);
-      }
-      return res.json();
-    })
-    .then(response => {
-      console.log(response.data);
-      console.log(response.data.modal_title);
-      console.log(response.data.modal_include);
-      modal.querySelector('.modal-title').innerHTML = response.data.modal_title;
-      modal.querySelector('.modal-body').innerHTML = response.data['modal_' + params.target_field];
+    $.post(ajaxUrl, params, function(response) {
+      var response = JSON.parse(response);
 
-      const carModal = new bootstrap.Modal(modal);
-      carModal.show();
-    })
-    .catch(err => console.error("Error:", err));
+      if (response.status) {
+        modal.find('.modal-title').html(response.data.modal_title);
+        modal.find('.modal-body').html(response.data['modal_' + params.target_field]);
+
+        var carModal = new bootstrap.Modal(modal[0]);
+        carModal.show();
+      } else {
+        console.error('Error:', response.data);
+      }
+    }).fail(function(err) {
+      console.error('Request failed:', err);
+    });
   });
 
-  // hide modal
-  const closeModal = document.querySelector('.close-modal');
-  closeModal.addEventListener('click', function () {
-    const modal = document.querySelector('#carModal');
-    modal.classList.remove('show');
-    modal.style.display = 'none';
+  // Hide modal
+  $('.close-modal').on('click', function () {
+    var modal = $('#carModal');
+    modal.removeClass('show').hide();
+  });
+
+  // Add collapse items
+  if ($(window).width() <= 992) {
+    $('.car-rent-section .container .cars-row')
+      .addClass('collapse-mobile-items')
+      .addClass('hide-cars');
+  } 
+  else {
+    $('.car-rent-section .container .cars-row')
+      .removeClass('collapse-mobile-items')
+      .removeClass('hide-cars');
+    $('.collapse-mobile-items-btn').removeClass('active');
+  }
+
+  $(window).on("resize orientationchange", function (e) {
+    if ($(window).width() <= 992) {
+      $('.car-rent-section .container .cars-row')
+        .addClass('collapse-mobile-items')
+        .addClass('hide-cars');
+    } 
+    else {
+      $('.car-rent-section .container .cars-row')
+        .removeClass('collapse-mobile-items')
+        .removeClass('hide-cars');
+      $('.collapse-mobile-items-btn').removeClass('active');
+    }
+  });
+  
+  $('.collapse-mobile-items-btn').on('click', function (e) {
+    e.preventDefault();
+    
+    $('.collapse-mobile-items').toggleClass('hide-cars');
+    $(this).toggleClass('active');
+    $(this).text($(this).hasClass('active') ? 'Hide All' : 'Show All');
   });
 });

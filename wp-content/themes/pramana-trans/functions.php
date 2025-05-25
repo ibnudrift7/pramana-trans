@@ -152,7 +152,8 @@ function get_car_details_ajax() {
 	if (!$post_id || !$row_index ) {
 		$response = json_encode( 
 			[
-				'status' => 404, 
+				'status' => 0, 
+				'status_code' => 404, 
 				'message' => 'No data found',
 			]
 		);
@@ -168,7 +169,8 @@ function get_car_details_ajax() {
 
 			$response = json_encode( 
 			[
-				'status' => 200,
+				'status' => 1,
+				'status_code' => 200,
 				'message' => 'Data found',
 				'data' => [
 					'modal_title' => $title,

@@ -18,7 +18,7 @@
   }
 
   // Create class attribute allowing for custom "className" and "align" values.
-  $class_name = 'clients section bg-client-trusted bg-custom_abu2';
+  $class_name = 'clients section bg-client-trusted bg-custom-grey';
   if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
   }

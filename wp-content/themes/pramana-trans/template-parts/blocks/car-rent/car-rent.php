@@ -18,7 +18,7 @@
   }
 
   // Create class attribute allowing for custom "className" and "align" values.
-  $class_name = 'py-5';
+  $class_name = 'py-5 car-rent-section';
   if (!empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
   }
@@ -29,7 +29,7 @@
 <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>">
   <div class="container py-5">
     <h2 class="section-title"><?php echo $header; ?></h2>
-    <div class="row g-4">
+    <div class="row g-4 cars-row">
       <?php if (have_rows('crent_items')): ?>
         <?php
           while (have_rows('crent_items')): the_row();
@@ -56,6 +56,11 @@
           endwhile; 
         ?>
       <?php endif; ?>
+    </div>
+    <div class="row d-lg-none mt-4">
+      <div class="col-12 text-center">
+        <a class="collapse-mobile-items-btn btn btn-gold btn-sm" href="javascript:;">Show All</a>
+      </div>
     </div>
   </div>
 </section>
