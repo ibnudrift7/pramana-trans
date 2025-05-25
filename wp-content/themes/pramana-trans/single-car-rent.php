@@ -38,7 +38,7 @@ get_header();
 								<div class="card-body px-5 disable_px_mobile d-flex flex-column justify-content-center h-100">
 									<div class="row">
 										<div class="col-md-12">
-											<h5 class="text-secondary text-white text-bold mb-2">HARGA SEWA</h5>
+											<h5 class="text-secondary text-white fw-bold mb-2">HARGA SEWA</h5>
 											<?php if (have_rows('car_rent_type')): ?>
 												<div class="customs_tablePrice">
 													<table class="price-table">
