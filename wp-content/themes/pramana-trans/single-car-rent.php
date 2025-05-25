@@ -25,39 +25,41 @@ get_header();
 				?>
 					<div class="card card-list-car mb-5">
 						<div class="row g-0">
-							<div class="col-md-4">
+							<div class="col-md-5">
 								<div class="car-card-header text-center">
 									<h5 class="fw-bold mb-2">Sewa <?php echo $car_name . ' ' . get_the_title(); ?></h5>
 								</div>
 								<div class="car-img-container">
 									<img src="<?php echo $car_image_url; ?>" alt="" class="car-img img-fluid rounded-start"
-										style="max-height: 420px">
+										style="max-height: 450px; object-fit: cover;">
 								</div>
 							</div>
-							<div class="col-md-8">
-								<div class="card-body d-flex flex-column justify-content-center h-100">
+							<div class="col-md-7">
+								<div class="card-body px-5 disable_px_mobile d-flex flex-column justify-content-center h-100">
 									<div class="row">
-										<div class="col-md-5">
-											<h6 class="text-secondary text-white text-bold mb-2">HARGA SEWA</h6>
+										<div class="col-md-12">
+											<h5 class="text-secondary text-white text-bold mb-2">HARGA SEWA</h5>
 											<?php if (have_rows('car_rent_type')): ?>
-												<table class="price-table">
-													<?php
-													while (have_rows('car_rent_type')): the_row();
-														$duration = get_sub_field('car_rent_duration');
-														$price = get_sub_field('car_rent_price');
+												<div class="customs_tablePrice">
+													<table class="price-table">
+														<?php
+														while (have_rows('car_rent_type')): the_row();
+															$duration = get_sub_field('car_rent_duration');
+															$price = get_sub_field('car_rent_price');
 
-													?>
-														<tr>
-															<td><?php echo $duration; ?></td>
-															<td class="text-end"><?php echo $price; ?></td>
-														</tr>
-													<?php
-													endwhile;
-													?>
-												</table>
+														?>
+															<tr>
+																<td><?php echo $duration; ?></td>
+																<td class="text-end"><?php echo $price; ?></td>
+															</tr>
+														<?php
+														endwhile;
+														?>
+													</table>
+												</div>
 											<?php endif; ?>
 										</div>
-										<div class="col-md-7">
+										<div class="col-md-12">
 											<div class="py-4"></div>
 											<h5 class="fw-bold mb-3">Harga Mulai <span class="price-highlight"><?php echo $start_price; ?></span></h5>
 
@@ -65,10 +67,10 @@ get_header();
 												<div class="itn d-flex gap-2">
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="include">Include</button>
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="exclude">Exclude</button>
-													<button class="btn btn-outline-primary btn-sm carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="facility">Fasilitas</button>
+													<!-- <button class="btn btn-outline-primary btn-sm carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="facility">Fasilitas</button> -->
 												</div>
 												<div class="itn d-flex gap-2">
-													<button data-car="<?php echo $car_name; ?>" class="btn btn-sm btn-outline-primary book_car_btn">Booking</button>
+													<button data-car="<?php echo $car_name; ?>" class="btn btn-sm btn-outline-primary book_car_btn px-5">Booking</button>
 												</div>
 											</div>
 										</div>
@@ -168,7 +170,7 @@ get_header();
 <script>
 	jQuery(document).ready(function($) {
 		// $('.carModalBtn').on('click', function() {
-		$('#carModal2').modal('show');
+		// $('#carModal2').modal('show');
 		// });
 	});
 </script>

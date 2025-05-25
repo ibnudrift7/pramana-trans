@@ -39,7 +39,7 @@
             $car_rent_excerpt = get_the_excerpt($post_id);
             $car_rent_link = get_permalink($post_id);
         ?>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-3 col-6">
               <div class="card">
                 <div class="card-img-container">
                   <img src="<?php echo $car_rent_img_url; ?>" alt="<?php echo $car_rent_title; ?>">

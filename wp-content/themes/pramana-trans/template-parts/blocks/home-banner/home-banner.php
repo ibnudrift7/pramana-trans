@@ -43,7 +43,7 @@
                   <div class="py-5"></div>
                   <div class="d-none d-sm-block py-5"></div>
                   <div class="col-lg-12 d-flex flex-column justify-content-center" data-aos="zoom-out">
-                    <h2 class="section-title text-yellow"><?php echo $title; ?></h2>
+                    <h2 class="section-title text-yellow d-none hidden"><?php echo $title; ?></h2>
                   </div>
                   <div class="py-5"></div>
                   <div class="py-2"></div>

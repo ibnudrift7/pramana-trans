@@ -1,4 +1,4 @@
-<footer id="footer" class="footer text-light py-4">
+<footer id="footer" class="footer text-light py-4 bg-custom_black">
   <div class="container footer-top">
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
       <?php 
