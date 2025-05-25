@@ -19,6 +19,7 @@ function pramana_supports() {
 	add_theme_support( 'custom-logo' );
 	add_theme_support( 'menus' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'title-tag' );
 
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );
@@ -163,10 +164,12 @@ function get_car_details_ajax() {
 		
 		if ($car_items) {
 			$car_item = $car_items[$row_index - 1];
+			$car_name = $car_item['car_name'];
 			$car_include = $car_item['car_include'];
 			$car_exclude = $car_item['car_exclude'];
 			$car_facilities = $car_item['car_facilities'];
 
+			$title .= ': ' . $car_name;
 			$response = json_encode( 
 			[
 				'status' => 1,
