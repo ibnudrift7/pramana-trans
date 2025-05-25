@@ -724,4 +724,8 @@
     position: relative;
   }
 
+  .customsMobBtn .itn.d-flex.gap-2{
+    justify-content: center;
+  }
+
 }
