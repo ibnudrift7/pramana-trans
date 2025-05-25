@@ -67,7 +67,6 @@ get_header();
 												<div class="itn d-flex gap-2">
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="include">Include</button>
 													<button class="btn btn-sm btn-outline-primary carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="exclude">Exclude</button>
-													<!-- <button class="btn btn-outline-primary btn-sm carModalBtn" data-post_id="<?php echo get_the_ID(); ?>" data-row_index="<?php echo $index; ?>" data-target_field="facility">Fasilitas</button> -->
 												</div>
 												<div class="itn d-flex gap-2">
 													<button data-car="<?php echo $car_name; ?>" class="btn btn-sm btn-outline-primary book_car_btn px-5">Booking</button>
@@ -103,77 +102,6 @@ get_header();
 		</div>
 	</div>
 </div>
-
-<!-- Modal 22 -->
-<div class="modal fade" id="carModal2" tabindex="-1" aria-labelledby="carModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content text-dark">
-			<div class="modal-header">
-				<h2 class="modal-title text-dark fs-5" id="carModalLabel">Fasilitas: <small>Mobil Innova</small></h2>
-				<button type="button" class="btn-close close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
-			</div>
-			<div class="modal-body fs-6">
-				<div class="feature-table my-2">
-					<table class="table table-borderless mb-0">
-						<tbody>
-							<tr>
-								<td>
-									<div class="d-flex align-items-center">
-										<i class="bi bi-car-front feature-icon me-3"></i>
-										<span class="feature-text fs-6">2020 Up</span>
-									</div>
-								</td>
-								<td>
-									<div class="d-flex align-items-center">
-										<i class="bi bi-server feature-icon me-3"></i>
-										<span class="feature-text fs-6">Air Mineral</span>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="d-flex align-items-center">
-										<i class="bi bi-bus-front feature-icon me-3"></i>
-										<span class="feature-text fs-6">7 Seat</span>
-									</div>
-								</td>
-								<td>
-									<div class="d-flex align-items-center">
-										<i class="bi bi-thermometer-half feature-icon me-3"></i>
-										<span class="feature-text fs-6">AC</span>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="d-flex align-items-center">
-										<i class="bi bi-disc feature-icon me-3"></i>
-										<span class="feature-text fs-6">DVD</span>
-									</div>
-								</td>
-								<td>
-									<div class="d-flex align-items-center">
-										<i class="bi bi-battery-charging feature-icon me-3"></i>
-										<span class="feature-text fs-6">Charger</span>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<!-- end features -->
-			</div>
-		</div>
-	</div>
-</div>
-
-<script>
-	jQuery(document).ready(function($) {
-		// $('.carModalBtn').on('click', function() {
-		// $('#carModal2').modal('show');
-		// });
-	});
-</script>
 
 <?php
 get_footer();

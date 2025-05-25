@@ -1,4 +1,28 @@
-<footer id="footer" class="footer text-light py-4 bg-custom_black">
+<?php
+  /**
+   * Check if any trusted partner section 
+   */
+  function any_tp_section() {
+    $post = get_post(); 
+
+    if (has_blocks($post->post_content)) {
+      $blocks = parse_blocks($post->post_content);
+
+      foreach ($blocks as $block) {
+        if ( $block['blockName'] == 'acf/trusted-partner' ) {
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }
+
+  $extra_class = any_tp_section() ? 'bg-custom-black' : '';
+?>
+
+
+<footer id="footer" class="footer text-light py-4 <?php echo $extra_class; ?>">
   <div class="container footer-top">
     <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
       <?php 
