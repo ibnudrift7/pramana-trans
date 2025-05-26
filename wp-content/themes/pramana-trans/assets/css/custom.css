@@ -584,6 +584,11 @@
   overflow: hidden;
 }
 
+.hide-tours {
+  max-height: 895px;
+  overflow: hidden;
+}
+
 @media (max-width: 992px) {
   .hero.slideHome {
     min-height: auto;

@@ -98,11 +98,17 @@ jQuery( document ).ready(function($) {
     $('.car-rent-section .container .cars-row')
       .addClass('collapse-mobile-items')
       .addClass('hide-cars');
+    $('.tour-packages-section .container .tours-row')
+      .addClass('collapse-mobile-items')
+      .addClass('hide-tours');
   } 
   else {
     $('.car-rent-section .container .cars-row')
       .removeClass('collapse-mobile-items')
       .removeClass('hide-cars');
+    $('.tour-packages-section .container .tours-row')
+      .removeClass('collapse-mobile-items')
+      .removeClass('hide-tours');
     $('.collapse-mobile-items-btn').removeClass('active');
   }
 
@@ -111,11 +117,17 @@ jQuery( document ).ready(function($) {
       $('.car-rent-section .container .cars-row')
         .addClass('collapse-mobile-items')
         .addClass('hide-cars');
+      $('.tour-packages-section .container .tours-row')
+        .addClass('collapse-mobile-items')
+        .addClass('hide-tours');
     } 
     else {
       $('.car-rent-section .container .cars-row')
         .removeClass('collapse-mobile-items')
         .removeClass('hide-cars');
+      $('.tour-pacakages-section .container .tours-row')
+        .removeClass('collapse-mobile-items')
+        .removeClass('hide-tours');
       $('.collapse-mobile-items-btn').removeClass('active');
     }
   });
@@ -123,7 +135,16 @@ jQuery( document ).ready(function($) {
   $('.collapse-mobile-items-btn').on('click', function (e) {
     e.preventDefault();
     
-    $('.collapse-mobile-items').toggleClass('hide-cars');
+    if ($('.collapse-mobile-items').hasClass('cars-row') ) {
+      $('.collapse-mobile-items')
+        .toggleClass('hide-cars');
+    }
+    else {
+      $('.collapse-mobile-items')
+        .toggleClass('hide-tours');
+    }
+    
+
     $(this).toggleClass('active');
     $(this).text($(this).hasClass('active') ? 'Hide All' : 'Show All');
   });

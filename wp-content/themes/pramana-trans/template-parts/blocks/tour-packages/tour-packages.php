@@ -1,4 +1,5 @@
 <?php
+
   /**
    * Tour Packages Block Template.
    *
@@ -29,7 +30,7 @@
       $class_name = 'featured-services section py-5 bg-dark';
       break;
     default:
-      $class_name = 'py-5';
+      $class_name = 'py-5 tour-packages-section';
       break;
   }
 
@@ -76,7 +77,7 @@
   <section <?php echo $anchor; ?> class="<?php echo esc_attr($class_name); ?>">
     <div class="container py-5">
       <h2 class="section-title pb-5"><?php echo $header; ?></h2>
-      <div class="row">
+      <div class="row tours-row">
         <?php if (have_rows('tpac_items')): ?>
           <?php
             while (have_rows('tpac_items')): the_row();
@@ -88,25 +89,30 @@
           ?>
               <div class="col-md-4 col-sm-6">
                 <div class="destination-card">
-                    <img src="<?php echo $tpac_img_url; ?>" alt="<?php echo $tpac_title; ?>">
-                    <div class="card-overlay">
-                      <h5>Paket Wisata <?php echo $tpac_title; ?></h5>
-                      <div class="d-flex justify-content-between align-items-end">
-                        <div class="cont">
-                          <span class="start">Start from:</span> <br>
-                          <span class="price-tag"><?php echo $tour_start_price ?></span>
-                        </div>
-                        <div class="btn-group">
-                          <a href="<?php echo $tpac_link ?>" class="btn-group btn-group-sm btn btn-warning"><small>Lihat</small></a>
-                        </div>
+                  <img src="<?php echo $tpac_img_url; ?>" alt="<?php echo $tpac_title; ?>">
+                  <div class="card-overlay">
+                    <h5>Paket Wisata <?php echo $tpac_title; ?></h5>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <div class="cont">
+                        <span class="start">Start from:</span> <br>
+                        <span class="price-tag"><?php echo $tour_start_price ?></span>
+                      </div>
+                      <div class="btn-group">
+                        <a href="<?php echo $tpac_link ?>" class="btn-group btn-group-sm btn btn-warning"><small>Lihat</small></a>
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
           <?php 
             endwhile; 
           ?>
         <?php endif; ?>
+      </div>
+      <div class="row d-lg-none mt-4">
+        <div class="col-12 text-center">
+          <a class="collapse-mobile-items-btn btn btn-gold btn-sm" href="javascript:;">Show All</a>
+        </div>
       </div>
     </div>
   </section>
