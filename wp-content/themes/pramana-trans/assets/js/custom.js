@@ -21,7 +21,7 @@ jQuery( document ).ready(function($) {
       `Car: ${book_car} %0a` +
       `Durasi: ${book_duration} %0a`;
 
-    window.location = 'https://wa.me/' + whatsapp_number + '?text=' + text; 
+    window.open( 'https://wa.me/' + whatsapp_number + '?text=' + text, '_blank');
   });
 
   $('#book_tour_form').on('submit', function(e) {
@@ -42,7 +42,7 @@ jQuery( document ).ready(function($) {
       `Tanggal Penjemputan: ${book_pickup_time} %0a` +
       `Lokasi Penjemputan: ${book_pickup_location} %0a`;
   
-    window.location = 'https://wa.me/' + whatsapp_number + '?text=' + text; 
+    window.open( 'https://wa.me/' + whatsapp_number + '?text=' + text, '_blank');
   });
 
   $('.book_car_btn').on('click', function(e) {
