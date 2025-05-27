@@ -71,6 +71,11 @@
           ?>
         <?php endif; ?>
       </div>
+      <div class="row d-lg-none mt-4">
+        <div class="col-12 text-center">
+          <a class="btn btn-gold btn-sm" href="<?php echo get_permalink(147); ?>">Show All</a>
+        </div>
+      </div>
     </div>
   </section>
 <?php else : ?>
